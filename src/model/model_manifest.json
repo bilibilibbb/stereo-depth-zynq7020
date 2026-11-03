@@ -1,0 +1,88 @@
+{
+  "parameters": 11459,
+  "shared_parameter_groups": 34,
+  "graph_nodes": 60,
+  "graph_tensors": 64,
+  "weights": {
+    "path": "reference/compute/weights/weights_256_ema.pt",
+    "sha256": "ed2076d18ce6c6f0bb688773eea08113d922801ce156b8c7f6624bdfffc602fe"
+  },
+  "compiled_definition": {
+    "path": "reference/compute/reference/v351a/retained_model_plan.c",
+    "sha256": "5a20371b3505896057684c8494c0cfbd9fbe6b0ee1c859ad07e52c595ae3dcc1"
+  },
+  "training_checkpoint_provenance": {
+    "report_sha256": "ce5e3c4a68ddf21200a94d2b7fb337114d0cf2f5cc42930e3c28e4c4988fe8bf",
+    "selected_step": 256,
+    "parent": {
+      "path": "build/student_half_guided_warm/20260927T162521_127229Z/result.json",
+      "sha256": "462bf699c54b49ea7f6a42417ec0e34be03bb731d5134650b5f783e1334fdc45"
+    },
+    "start_step": 0,
+    "end_step": 256,
+    "optimizer_updates": 256,
+    "scope": "This retained block used 256 updates after a warm parent; not the whole training history.",
+    "teacher": {
+      "manifest": "9a310611bc2dd8a8529b469a989dede92fb45319804a08a6592a340c99ddb3bf",
+      "runtime_sources": "8bfddf7bd5644eb9f6963505f01316f9bbedb5e90f678e174c9ad1d0eaa59dce",
+      "verified_sources": 258,
+      "artifacts": {
+        "graph.json": "5c75f3f580492634b2cce6874139f6a56db57d4705b64ce3b13dba1cf55708f1",
+        "selected_weights.npz": "9fad3cbc7ca3eb3e575a1cd1ee9a9f6ab511c69238d846549812bbab4c98ce22"
+      }
+    },
+    "datasets": {
+      "old": [
+        {
+          "directory": "build\\r1_data\\20260920T140410_452362Z",
+          "sha256": "65ec283175dce3e9e0efc571d759366e9fd8e98346866a6c6e3f9acb03b6cf5f"
+        },
+        {
+          "directory": "build\\r2_data_v2\\20260920T144937_501525Z",
+          "sha256": "5004ff3988a5dd2cbc9fd673e0240292b01603d8bc0d822e41e32d1077a5e9aa"
+        },
+        {
+          "directory": "build\\r3_eth3d\\20260920T153340_574118Z",
+          "sha256": "0492483a5daad790b33a54e60c87a4a9838082137f70bb00ae82b50454ef35e4"
+        },
+        {
+          "path": "optimizations\\model_r6_20260921\\data_contract.json",
+          "sha256": "3d2a030a480d755cbce60599b18a5ba531baa1280965a30cd6e51f922930c02a"
+        },
+        {
+          "directory": "build\\r6_sintel\\20260920T165321_145605Z",
+          "sha256": "814fa6e0960d13f3b9d01a98974d360ae705fb87be53dded62281dc6d78a9800"
+        },
+        {
+          "path": "optimizations\\model_r6_20260921\\real_scene_contract.json",
+          "sha256": "ba804c2245624a263a9d9c86350c5e7577ab3fba462146482e217bc5dd751c7d"
+        },
+        {
+          "directory": "build\\r6_middlebury2021\\20260920T172251_548606Z",
+          "sha256": "cd58f83efa939da6bbe360b91cc919a280596183008fcabbffaf64da6f32a03c"
+        },
+        {
+          "directory": "build\\r7_foundation_data\\20260921T013134_086185Z",
+          "sha256": "64cfe52ab77b82765cfa670b9ef3e52731a76b9fea31d851f859a7ade5f824a0"
+        },
+        {
+          "path": "optimizations\\model_r7_20260921\\foundation_data.py",
+          "sha256": "2d3bf0ad1f69ee7c2903050867c3a9fb390d8b56bbfea677414775b1df3e3ea5"
+        },
+        {
+          "directory": "build\\r7_fsd_diverse_data\\20260921T023734_226428Z",
+          "sha256": "3bc00a9e09ffcd4809eb1346233849cc599c8b857caaa33940de7b532d927eb8"
+        },
+        {
+          "path": "optimizations\\model_r7_20260921\\diverse_data.py",
+          "sha256": "141880f0c01f0dabc3d5767ff8bab90634ea1689ab7219b35f3c58710e884e0b"
+        }
+      ],
+      "new_contract": "40b03353b677c6524a0cf129b3d9d85093120a945849e747504dcec773256544",
+      "data_only_scope": "Content-group held diagnostic split, shared two SHA readers."
+    }
+  },
+  "numerics": "Use frozen C/RTL definitions and integer coefficient arrays; reloading the floating checkpoint does not replace the accepted quantized reference.",
+  "board_runs_teacher": false,
+  "training_data_redistributed": false
+}

@@ -1,0 +1,1889 @@
+{
+  "scope": "Frozen graph description; compiled implementation is retained_model_plan.c.",
+  "historical_metadata_notice": "The nested accuracy and physical_resources strings are retained from the original graph planning export, before training and deployment. They are not the current model or hardware acceptance status. See model_manifest.json, frozen parameter identities and the submission evidence for current results.",
+  "original_sha256": "9015c97e45af145a4c00836febd4ba229a23e8f8a3ca6d29c5b6e8af00d1a3c8",
+  "selected_variant": "control",
+  "graph": {
+    "shape": [
+      320,
+      240
+    ],
+    "padded_shape": [
+      320,
+      256
+    ],
+    "search_disparity_range": 64,
+    "candidate_anchors": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63
+    ],
+    "channels": {
+      "stem": 12,
+      "feature": 16,
+      "aggregation": [
+        16,
+        24,
+        32
+      ],
+      "refine": 8
+    },
+    "nodes": [
+      {
+        "name": "left.stem",
+        "op": "conv",
+        "inputs": [
+          "left.rgb"
+        ],
+        "shape": [
+          12,
+          128,
+          160
+        ],
+        "group": "left.stem",
+        "k": 3,
+        "stride": 2,
+        "dilation": 1,
+        "ci": 3,
+        "terms": 27,
+        "parameter_key": "feature.stem",
+        "macs": 6635520,
+        "feed64": 138240
+      },
+      {
+        "name": "left.half.dw",
+        "op": "dw",
+        "inputs": [
+          "left.stem"
+        ],
+        "shape": [
+          12,
+          128,
+          160
+        ],
+        "group": "left.half",
+        "k": 3,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 12,
+        "terms": 9,
+        "parameter_key": "feature.half.dw",
+        "macs": 2211840,
+        "feed64": 0
+      },
+      {
+        "name": "left.half.pw",
+        "op": "conv",
+        "inputs": [
+          "left.half.dw"
+        ],
+        "shape": [
+          16,
+          128,
+          160
+        ],
+        "group": "left.half",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 12,
+        "terms": 12,
+        "parameter_key": "feature.half.pw",
+        "macs": 3932160,
+        "feed64": 61440
+      },
+      {
+        "name": "left.quarter.dw",
+        "op": "dw",
+        "inputs": [
+          "left.half.pw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "left.quarter",
+        "k": 3,
+        "stride": 2,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 9,
+        "parameter_key": "feature.quarter.dw",
+        "macs": 737280,
+        "feed64": 0
+      },
+      {
+        "name": "left.quarter.pw",
+        "op": "conv",
+        "inputs": [
+          "left.quarter.dw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "left.quarter",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "feature.quarter.pw",
+        "macs": 1310720,
+        "feed64": 20480
+      },
+      {
+        "name": "left.res0.dw",
+        "op": "dw",
+        "inputs": [
+          "left.quarter.pw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "left.res0",
+        "k": 3,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 9,
+        "parameter_key": "feature.res0.dw",
+        "macs": 737280,
+        "feed64": 0
+      },
+      {
+        "name": "left.res0.pw",
+        "op": "conv",
+        "inputs": [
+          "left.res0.dw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "left.res0",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "feature.res0.pw",
+        "macs": 1310720,
+        "feed64": 20480
+      },
+      {
+        "name": "left.res0.add",
+        "op": "add",
+        "inputs": [
+          "left.quarter.pw",
+          "left.res0.pw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "left.res0"
+      },
+      {
+        "name": "left.res1.dw",
+        "op": "dw",
+        "inputs": [
+          "left.res0.add"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "left.res1",
+        "k": 3,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 9,
+        "parameter_key": "feature.res1.dw",
+        "macs": 737280,
+        "feed64": 0
+      },
+      {
+        "name": "left.res1.pw",
+        "op": "conv",
+        "inputs": [
+          "left.res1.dw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "left.res1",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "feature.res1.pw",
+        "macs": 1310720,
+        "feed64": 20480
+      },
+      {
+        "name": "left.res1.add",
+        "op": "add",
+        "inputs": [
+          "left.res0.add",
+          "left.res1.pw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "left.res1"
+      },
+      {
+        "name": "left.projection",
+        "op": "conv",
+        "inputs": [
+          "left.res1.add"
+        ],
+        "shape": [
+          8,
+          64,
+          80
+        ],
+        "group": "left.projection",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "feature.projection",
+        "macs": 655360,
+        "feed64": 10240
+      },
+      {
+        "name": "right.stem",
+        "op": "conv",
+        "inputs": [
+          "right.rgb"
+        ],
+        "shape": [
+          12,
+          128,
+          160
+        ],
+        "group": "right.stem",
+        "k": 3,
+        "stride": 2,
+        "dilation": 1,
+        "ci": 3,
+        "terms": 27,
+        "parameter_key": "feature.stem",
+        "macs": 6635520,
+        "feed64": 138240
+      },
+      {
+        "name": "right.half.dw",
+        "op": "dw",
+        "inputs": [
+          "right.stem"
+        ],
+        "shape": [
+          12,
+          128,
+          160
+        ],
+        "group": "right.half",
+        "k": 3,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 12,
+        "terms": 9,
+        "parameter_key": "feature.half.dw",
+        "macs": 2211840,
+        "feed64": 0
+      },
+      {
+        "name": "right.half.pw",
+        "op": "conv",
+        "inputs": [
+          "right.half.dw"
+        ],
+        "shape": [
+          16,
+          128,
+          160
+        ],
+        "group": "right.half",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 12,
+        "terms": 12,
+        "parameter_key": "feature.half.pw",
+        "macs": 3932160,
+        "feed64": 61440
+      },
+      {
+        "name": "right.quarter.dw",
+        "op": "dw",
+        "inputs": [
+          "right.half.pw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "right.quarter",
+        "k": 3,
+        "stride": 2,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 9,
+        "parameter_key": "feature.quarter.dw",
+        "macs": 737280,
+        "feed64": 0
+      },
+      {
+        "name": "right.quarter.pw",
+        "op": "conv",
+        "inputs": [
+          "right.quarter.dw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "right.quarter",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "feature.quarter.pw",
+        "macs": 1310720,
+        "feed64": 20480
+      },
+      {
+        "name": "right.res0.dw",
+        "op": "dw",
+        "inputs": [
+          "right.quarter.pw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "right.res0",
+        "k": 3,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 9,
+        "parameter_key": "feature.res0.dw",
+        "macs": 737280,
+        "feed64": 0
+      },
+      {
+        "name": "right.res0.pw",
+        "op": "conv",
+        "inputs": [
+          "right.res0.dw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "right.res0",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "feature.res0.pw",
+        "macs": 1310720,
+        "feed64": 20480
+      },
+      {
+        "name": "right.res0.add",
+        "op": "add",
+        "inputs": [
+          "right.quarter.pw",
+          "right.res0.pw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "right.res0"
+      },
+      {
+        "name": "right.res1.dw",
+        "op": "dw",
+        "inputs": [
+          "right.res0.add"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "right.res1",
+        "k": 3,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 9,
+        "parameter_key": "feature.res1.dw",
+        "macs": 737280,
+        "feed64": 0
+      },
+      {
+        "name": "right.res1.pw",
+        "op": "conv",
+        "inputs": [
+          "right.res1.dw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "right.res1",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "feature.res1.pw",
+        "macs": 1310720,
+        "feed64": 20480
+      },
+      {
+        "name": "right.res1.add",
+        "op": "add",
+        "inputs": [
+          "right.res0.add",
+          "right.res1.pw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "right.res1"
+      },
+      {
+        "name": "right.projection",
+        "op": "conv",
+        "inputs": [
+          "right.res1.add"
+        ],
+        "shape": [
+          8,
+          64,
+          80
+        ],
+        "group": "right.projection",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "feature.projection",
+        "macs": 655360,
+        "feed64": 10240
+      },
+      {
+        "name": "correlation",
+        "op": "correlation",
+        "inputs": [
+          "left.projection",
+          "right.projection"
+        ],
+        "shape": [
+          17,
+          64,
+          80
+        ],
+        "group": "correlation",
+        "macs": 696320
+      },
+      {
+        "name": "aggregation.input",
+        "op": "view_concat",
+        "inputs": [
+          "correlation",
+          "left.projection",
+          "sgm.priors"
+        ],
+        "shape": [
+          29,
+          64,
+          80
+        ],
+        "group": "aggregation.input"
+      },
+      {
+        "name": "aggregation.entry",
+        "op": "conv",
+        "inputs": [
+          "aggregation.input"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "aggregation.entry",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 29,
+        "terms": 29,
+        "parameter_key": "aggregation.entry",
+        "macs": 2375680,
+        "feed64": 37120
+      },
+      {
+        "name": "aggregation.down1.dw",
+        "op": "dw",
+        "inputs": [
+          "aggregation.entry"
+        ],
+        "shape": [
+          16,
+          32,
+          40
+        ],
+        "group": "aggregation.down1",
+        "k": 3,
+        "stride": 2,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 9,
+        "parameter_key": "aggregation.down1.dw",
+        "macs": 184320,
+        "feed64": 0
+      },
+      {
+        "name": "aggregation.down1.pw",
+        "op": "conv",
+        "inputs": [
+          "aggregation.down1.dw"
+        ],
+        "shape": [
+          24,
+          32,
+          40
+        ],
+        "group": "aggregation.down1",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "aggregation.down1.pw",
+        "macs": 491520,
+        "feed64": 7680
+      },
+      {
+        "name": "aggregation.down2.dw",
+        "op": "dw",
+        "inputs": [
+          "aggregation.down1.pw"
+        ],
+        "shape": [
+          24,
+          16,
+          20
+        ],
+        "group": "aggregation.down2",
+        "k": 3,
+        "stride": 2,
+        "dilation": 1,
+        "ci": 24,
+        "terms": 9,
+        "parameter_key": "aggregation.down2.dw",
+        "macs": 69120,
+        "feed64": 0
+      },
+      {
+        "name": "aggregation.down2.pw",
+        "op": "conv",
+        "inputs": [
+          "aggregation.down2.dw"
+        ],
+        "shape": [
+          32,
+          16,
+          20
+        ],
+        "group": "aggregation.down2",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 24,
+        "terms": 24,
+        "parameter_key": "aggregation.down2.pw",
+        "macs": 245760,
+        "feed64": 4608
+      },
+      {
+        "name": "aggregation.context0.dw",
+        "op": "dw",
+        "inputs": [
+          "aggregation.down2.pw"
+        ],
+        "shape": [
+          32,
+          16,
+          20
+        ],
+        "group": "aggregation.context0",
+        "k": 3,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 32,
+        "terms": 9,
+        "parameter_key": "aggregation.context0.dw",
+        "macs": 92160,
+        "feed64": 0
+      },
+      {
+        "name": "aggregation.context0.pw",
+        "op": "conv",
+        "inputs": [
+          "aggregation.context0.dw"
+        ],
+        "shape": [
+          32,
+          16,
+          20
+        ],
+        "group": "aggregation.context0",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 32,
+        "terms": 32,
+        "parameter_key": "aggregation.context0.pw",
+        "macs": 327680,
+        "feed64": 6144
+      },
+      {
+        "name": "aggregation.context0.add",
+        "op": "add",
+        "inputs": [
+          "aggregation.down2.pw",
+          "aggregation.context0.pw"
+        ],
+        "shape": [
+          32,
+          16,
+          20
+        ],
+        "group": "aggregation.context0"
+      },
+      {
+        "name": "aggregation.context1.dw",
+        "op": "dw",
+        "inputs": [
+          "aggregation.context0.add"
+        ],
+        "shape": [
+          32,
+          16,
+          20
+        ],
+        "group": "aggregation.context1",
+        "k": 3,
+        "stride": 1,
+        "dilation": 2,
+        "ci": 32,
+        "terms": 9,
+        "parameter_key": "aggregation.context1.dw",
+        "macs": 92160,
+        "feed64": 0
+      },
+      {
+        "name": "aggregation.context1.pw",
+        "op": "conv",
+        "inputs": [
+          "aggregation.context1.dw"
+        ],
+        "shape": [
+          32,
+          16,
+          20
+        ],
+        "group": "aggregation.context1",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 32,
+        "terms": 32,
+        "parameter_key": "aggregation.context1.pw",
+        "macs": 327680,
+        "feed64": 6144
+      },
+      {
+        "name": "aggregation.context1.add",
+        "op": "add",
+        "inputs": [
+          "aggregation.context0.add",
+          "aggregation.context1.pw"
+        ],
+        "shape": [
+          32,
+          16,
+          20
+        ],
+        "group": "aggregation.context1"
+      },
+      {
+        "name": "aggregation.context2.dw",
+        "op": "dw",
+        "inputs": [
+          "aggregation.context1.add"
+        ],
+        "shape": [
+          32,
+          16,
+          20
+        ],
+        "group": "aggregation.context2",
+        "k": 3,
+        "stride": 1,
+        "dilation": 4,
+        "ci": 32,
+        "terms": 9,
+        "parameter_key": "aggregation.context2.dw",
+        "macs": 92160,
+        "feed64": 0
+      },
+      {
+        "name": "aggregation.context2.pw",
+        "op": "conv",
+        "inputs": [
+          "aggregation.context2.dw"
+        ],
+        "shape": [
+          32,
+          16,
+          20
+        ],
+        "group": "aggregation.context2",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 32,
+        "terms": 32,
+        "parameter_key": "aggregation.context2.pw",
+        "macs": 327680,
+        "feed64": 6144
+      },
+      {
+        "name": "aggregation.context2.add",
+        "op": "add",
+        "inputs": [
+          "aggregation.context1.add",
+          "aggregation.context2.pw"
+        ],
+        "shape": [
+          32,
+          16,
+          20
+        ],
+        "group": "aggregation.context2"
+      },
+      {
+        "name": "aggregation.up1.project",
+        "op": "conv",
+        "inputs": [
+          "aggregation.context2.add"
+        ],
+        "shape": [
+          24,
+          16,
+          20
+        ],
+        "group": "aggregation.up1",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 32,
+        "terms": 32,
+        "parameter_key": "aggregation.up1.project",
+        "macs": 245760,
+        "feed64": 4608
+      },
+      {
+        "name": "aggregation.up1.resize",
+        "op": "bilinear",
+        "inputs": [
+          "aggregation.up1.project"
+        ],
+        "shape": [
+          24,
+          32,
+          40
+        ],
+        "group": "aggregation.up1"
+      },
+      {
+        "name": "aggregation.up1.add",
+        "op": "add",
+        "inputs": [
+          "aggregation.up1.resize",
+          "aggregation.down1.pw"
+        ],
+        "shape": [
+          24,
+          32,
+          40
+        ],
+        "group": "aggregation.up1"
+      },
+      {
+        "name": "aggregation.decode1.dw",
+        "op": "dw",
+        "inputs": [
+          "aggregation.up1.add"
+        ],
+        "shape": [
+          24,
+          32,
+          40
+        ],
+        "group": "aggregation.decode1",
+        "k": 3,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 24,
+        "terms": 9,
+        "parameter_key": "aggregation.decode1.dw",
+        "macs": 276480,
+        "feed64": 0
+      },
+      {
+        "name": "aggregation.decode1.pw",
+        "op": "conv",
+        "inputs": [
+          "aggregation.decode1.dw"
+        ],
+        "shape": [
+          24,
+          32,
+          40
+        ],
+        "group": "aggregation.decode1",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 24,
+        "terms": 24,
+        "parameter_key": "aggregation.decode1.pw",
+        "macs": 737280,
+        "feed64": 11520
+      },
+      {
+        "name": "aggregation.up0.project",
+        "op": "conv",
+        "inputs": [
+          "aggregation.decode1.pw"
+        ],
+        "shape": [
+          16,
+          32,
+          40
+        ],
+        "group": "aggregation.up0",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 24,
+        "terms": 24,
+        "parameter_key": "aggregation.up0.project",
+        "macs": 491520,
+        "feed64": 7680
+      },
+      {
+        "name": "aggregation.up0.resize",
+        "op": "bilinear",
+        "inputs": [
+          "aggregation.up0.project"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "aggregation.up0"
+      },
+      {
+        "name": "aggregation.up0.add",
+        "op": "add",
+        "inputs": [
+          "aggregation.up0.resize",
+          "aggregation.entry"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "aggregation.up0"
+      },
+      {
+        "name": "aggregation.decode0.dw",
+        "op": "dw",
+        "inputs": [
+          "aggregation.up0.add"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "aggregation.decode0",
+        "k": 3,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 9,
+        "parameter_key": "aggregation.decode0.dw",
+        "macs": 737280,
+        "feed64": 0
+      },
+      {
+        "name": "aggregation.decode0.pw",
+        "op": "conv",
+        "inputs": [
+          "aggregation.decode0.dw"
+        ],
+        "shape": [
+          16,
+          64,
+          80
+        ],
+        "group": "aggregation.decode0",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "aggregation.decode0.pw",
+        "macs": 1310720,
+        "feed64": 20480
+      },
+      {
+        "name": "aggregation.logits",
+        "op": "conv",
+        "inputs": [
+          "aggregation.decode0.pw"
+        ],
+        "shape": [
+          17,
+          64,
+          80
+        ],
+        "group": "aggregation.logits",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 16,
+        "terms": 16,
+        "parameter_key": "aggregation.logits",
+        "macs": 1392640,
+        "feed64": 30720
+      },
+      {
+        "name": "disparity_entropy",
+        "op": "soft_argmin",
+        "inputs": [
+          "aggregation.logits"
+        ],
+        "shape": [
+          2,
+          64,
+          80
+        ],
+        "group": "disparity_entropy"
+      },
+      {
+        "name": "refine.input_pool",
+        "op": "avgpool2",
+        "inputs": [
+          "refine.attributes"
+        ],
+        "shape": [
+          8,
+          128,
+          160
+        ],
+        "group": "refine.input_pool"
+      },
+      {
+        "name": "refine.entry",
+        "op": "conv",
+        "inputs": [
+          "refine.input_pool"
+        ],
+        "shape": [
+          8,
+          128,
+          160
+        ],
+        "group": "refine.entry",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 8,
+        "terms": 8,
+        "parameter_key": "refine.entry",
+        "macs": 1310720,
+        "feed64": 20480
+      },
+      {
+        "name": "refine.block0.dw",
+        "op": "dw",
+        "inputs": [
+          "refine.entry"
+        ],
+        "shape": [
+          8,
+          128,
+          160
+        ],
+        "group": "refine.block0",
+        "k": 3,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 8,
+        "terms": 9,
+        "parameter_key": "refine.block0.dw",
+        "macs": 1474560,
+        "feed64": 0
+      },
+      {
+        "name": "refine.block0.pw",
+        "op": "conv",
+        "inputs": [
+          "refine.block0.dw"
+        ],
+        "shape": [
+          8,
+          128,
+          160
+        ],
+        "group": "refine.block0",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 8,
+        "terms": 8,
+        "parameter_key": "refine.block0.pw",
+        "macs": 1310720,
+        "feed64": 20480
+      },
+      {
+        "name": "refine.block1.dw",
+        "op": "dw",
+        "inputs": [
+          "refine.block0.pw"
+        ],
+        "shape": [
+          8,
+          128,
+          160
+        ],
+        "group": "refine.block1",
+        "k": 3,
+        "stride": 1,
+        "dilation": 2,
+        "ci": 8,
+        "terms": 9,
+        "parameter_key": "refine.block1.dw",
+        "macs": 1474560,
+        "feed64": 0
+      },
+      {
+        "name": "refine.block1.pw",
+        "op": "conv",
+        "inputs": [
+          "refine.block1.dw"
+        ],
+        "shape": [
+          8,
+          128,
+          160
+        ],
+        "group": "refine.block1",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 8,
+        "terms": 8,
+        "parameter_key": "refine.block1.pw",
+        "macs": 1310720,
+        "feed64": 20480
+      },
+      {
+        "name": "refine.residual_confidence",
+        "op": "conv",
+        "inputs": [
+          "refine.block1.pw"
+        ],
+        "shape": [
+          2,
+          128,
+          160
+        ],
+        "group": "refine.residual_confidence",
+        "k": 1,
+        "stride": 1,
+        "dilation": 1,
+        "ci": 8,
+        "terms": 8,
+        "parameter_key": "refine.residual_confidence",
+        "macs": 327680,
+        "feed64": 20480
+      },
+      {
+        "name": "refine.full_residual_confidence",
+        "op": "bilinear",
+        "inputs": [
+          "refine.residual_confidence"
+        ],
+        "shape": [
+          2,
+          256,
+          320
+        ],
+        "group": "refine.output"
+      }
+    ],
+    "tensors": {
+      "left.rgb": [
+        3,
+        256,
+        320
+      ],
+      "left.stem": [
+        12,
+        128,
+        160
+      ],
+      "left.half.dw": [
+        12,
+        128,
+        160
+      ],
+      "left.half.pw": [
+        16,
+        128,
+        160
+      ],
+      "left.quarter.dw": [
+        16,
+        64,
+        80
+      ],
+      "left.quarter.pw": [
+        16,
+        64,
+        80
+      ],
+      "left.res0.dw": [
+        16,
+        64,
+        80
+      ],
+      "left.res0.pw": [
+        16,
+        64,
+        80
+      ],
+      "left.res0.add": [
+        16,
+        64,
+        80
+      ],
+      "left.res1.dw": [
+        16,
+        64,
+        80
+      ],
+      "left.res1.pw": [
+        16,
+        64,
+        80
+      ],
+      "left.res1.add": [
+        16,
+        64,
+        80
+      ],
+      "left.projection": [
+        8,
+        64,
+        80
+      ],
+      "right.rgb": [
+        3,
+        256,
+        320
+      ],
+      "right.stem": [
+        12,
+        128,
+        160
+      ],
+      "right.half.dw": [
+        12,
+        128,
+        160
+      ],
+      "right.half.pw": [
+        16,
+        128,
+        160
+      ],
+      "right.quarter.dw": [
+        16,
+        64,
+        80
+      ],
+      "right.quarter.pw": [
+        16,
+        64,
+        80
+      ],
+      "right.res0.dw": [
+        16,
+        64,
+        80
+      ],
+      "right.res0.pw": [
+        16,
+        64,
+        80
+      ],
+      "right.res0.add": [
+        16,
+        64,
+        80
+      ],
+      "right.res1.dw": [
+        16,
+        64,
+        80
+      ],
+      "right.res1.pw": [
+        16,
+        64,
+        80
+      ],
+      "right.res1.add": [
+        16,
+        64,
+        80
+      ],
+      "right.projection": [
+        8,
+        64,
+        80
+      ],
+      "correlation": [
+        17,
+        64,
+        80
+      ],
+      "sgm.priors": [
+        4,
+        64,
+        80
+      ],
+      "aggregation.input": [
+        29,
+        64,
+        80
+      ],
+      "aggregation.entry": [
+        16,
+        64,
+        80
+      ],
+      "aggregation.down1.dw": [
+        16,
+        32,
+        40
+      ],
+      "aggregation.down1.pw": [
+        24,
+        32,
+        40
+      ],
+      "aggregation.down2.dw": [
+        24,
+        16,
+        20
+      ],
+      "aggregation.down2.pw": [
+        32,
+        16,
+        20
+      ],
+      "aggregation.context0.dw": [
+        32,
+        16,
+        20
+      ],
+      "aggregation.context0.pw": [
+        32,
+        16,
+        20
+      ],
+      "aggregation.context0.add": [
+        32,
+        16,
+        20
+      ],
+      "aggregation.context1.dw": [
+        32,
+        16,
+        20
+      ],
+      "aggregation.context1.pw": [
+        32,
+        16,
+        20
+      ],
+      "aggregation.context1.add": [
+        32,
+        16,
+        20
+      ],
+      "aggregation.context2.dw": [
+        32,
+        16,
+        20
+      ],
+      "aggregation.context2.pw": [
+        32,
+        16,
+        20
+      ],
+      "aggregation.context2.add": [
+        32,
+        16,
+        20
+      ],
+      "aggregation.up1.project": [
+        24,
+        16,
+        20
+      ],
+      "aggregation.up1.resize": [
+        24,
+        32,
+        40
+      ],
+      "aggregation.up1.add": [
+        24,
+        32,
+        40
+      ],
+      "aggregation.decode1.dw": [
+        24,
+        32,
+        40
+      ],
+      "aggregation.decode1.pw": [
+        24,
+        32,
+        40
+      ],
+      "aggregation.up0.project": [
+        16,
+        32,
+        40
+      ],
+      "aggregation.up0.resize": [
+        16,
+        64,
+        80
+      ],
+      "aggregation.up0.add": [
+        16,
+        64,
+        80
+      ],
+      "aggregation.decode0.dw": [
+        16,
+        64,
+        80
+      ],
+      "aggregation.decode0.pw": [
+        16,
+        64,
+        80
+      ],
+      "aggregation.logits": [
+        17,
+        64,
+        80
+      ],
+      "disparity_entropy": [
+        2,
+        64,
+        80
+      ],
+      "refine.attributes": [
+        8,
+        256,
+        320
+      ],
+      "refine.input_pool": [
+        8,
+        128,
+        160
+      ],
+      "refine.entry": [
+        8,
+        128,
+        160
+      ],
+      "refine.block0.dw": [
+        8,
+        128,
+        160
+      ],
+      "refine.block0.pw": [
+        8,
+        128,
+        160
+      ],
+      "refine.block1.dw": [
+        8,
+        128,
+        160
+      ],
+      "refine.block1.pw": [
+        8,
+        128,
+        160
+      ],
+      "refine.residual_confidence": [
+        2,
+        128,
+        160
+      ],
+      "refine.full_residual_confidence": [
+        2,
+        256,
+        320
+      ]
+    },
+    "parameter_count": 11459,
+    "totals": {
+      "conv_macs": 42844160,
+      "feed64": 767488,
+      "dw_pairs": 741120,
+      "parameter_read_bytes": 27110,
+      "dw_macs": 13340160,
+      "correlation_macs": 696320
+    },
+    "groups": {
+      "left": 19578880,
+      "right": 19578880,
+      "correlation": 696320,
+      "aggregation": 9817600,
+      "disparity_entropy": 0,
+      "refine": 7208960
+    },
+    "cnn_mac_total": 56880640,
+    "traffic": {
+      "unfused_bytes": 23538150,
+      "local_pair_fused_bytes": 15612390,
+      "block_streamed_bytes": 7584230,
+      "read_bytes_before_fusion": 13260800,
+      "write_bytes_before_fusion": 10250240,
+      "weight_call_bytes": 27110,
+      "local_edges": [
+        {
+          "producer": "left.half.dw",
+          "consumer": "left.half.pw",
+          "roundtrip_bytes": 983040
+        },
+        {
+          "producer": "left.quarter.dw",
+          "consumer": "left.quarter.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "left.res0.dw",
+          "consumer": "left.res0.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "left.res0.pw",
+          "consumer": "left.res0.add",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "left.res1.dw",
+          "consumer": "left.res1.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "left.res1.pw",
+          "consumer": "left.res1.add",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.half.dw",
+          "consumer": "right.half.pw",
+          "roundtrip_bytes": 983040
+        },
+        {
+          "producer": "right.quarter.dw",
+          "consumer": "right.quarter.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.res0.dw",
+          "consumer": "right.res0.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.res0.pw",
+          "consumer": "right.res0.add",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.res1.dw",
+          "consumer": "right.res1.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.res1.pw",
+          "consumer": "right.res1.add",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "aggregation.down1.dw",
+          "consumer": "aggregation.down1.pw",
+          "roundtrip_bytes": 81920
+        },
+        {
+          "producer": "aggregation.down2.dw",
+          "consumer": "aggregation.down2.pw",
+          "roundtrip_bytes": 30720
+        },
+        {
+          "producer": "aggregation.context0.dw",
+          "consumer": "aggregation.context0.pw",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.context0.pw",
+          "consumer": "aggregation.context0.add",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.context1.dw",
+          "consumer": "aggregation.context1.pw",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.context1.pw",
+          "consumer": "aggregation.context1.add",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.context2.dw",
+          "consumer": "aggregation.context2.pw",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.context2.pw",
+          "consumer": "aggregation.context2.add",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.up1.project",
+          "consumer": "aggregation.up1.resize",
+          "roundtrip_bytes": 30720
+        },
+        {
+          "producer": "aggregation.up1.resize",
+          "consumer": "aggregation.up1.add",
+          "roundtrip_bytes": 122880
+        },
+        {
+          "producer": "aggregation.decode1.dw",
+          "consumer": "aggregation.decode1.pw",
+          "roundtrip_bytes": 122880
+        },
+        {
+          "producer": "aggregation.up0.project",
+          "consumer": "aggregation.up0.resize",
+          "roundtrip_bytes": 81920
+        },
+        {
+          "producer": "aggregation.up0.resize",
+          "consumer": "aggregation.up0.add",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "aggregation.decode0.dw",
+          "consumer": "aggregation.decode0.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "refine.block0.dw",
+          "consumer": "refine.block0.pw",
+          "roundtrip_bytes": 655360
+        },
+        {
+          "producer": "refine.block1.dw",
+          "consumer": "refine.block1.pw",
+          "roundtrip_bytes": 655360
+        }
+      ],
+      "block_edges": [
+        {
+          "producer": "left.half.dw",
+          "consumer": "left.half.pw",
+          "roundtrip_bytes": 983040
+        },
+        {
+          "producer": "left.quarter.dw",
+          "consumer": "left.quarter.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "left.res0.dw",
+          "consumer": "left.res0.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "left.res0.pw",
+          "consumer": "left.res0.add",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "left.res1.dw",
+          "consumer": "left.res1.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "left.res1.pw",
+          "consumer": "left.res1.add",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.half.dw",
+          "consumer": "right.half.pw",
+          "roundtrip_bytes": 983040
+        },
+        {
+          "producer": "right.quarter.dw",
+          "consumer": "right.quarter.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.res0.dw",
+          "consumer": "right.res0.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.res0.pw",
+          "consumer": "right.res0.add",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.res1.dw",
+          "consumer": "right.res1.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.res1.pw",
+          "consumer": "right.res1.add",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "aggregation.down1.dw",
+          "consumer": "aggregation.down1.pw",
+          "roundtrip_bytes": 81920
+        },
+        {
+          "producer": "aggregation.down2.dw",
+          "consumer": "aggregation.down2.pw",
+          "roundtrip_bytes": 30720
+        },
+        {
+          "producer": "aggregation.context0.dw",
+          "consumer": "aggregation.context0.pw",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.context0.pw",
+          "consumer": "aggregation.context0.add",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.context1.dw",
+          "consumer": "aggregation.context1.pw",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.context1.pw",
+          "consumer": "aggregation.context1.add",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.context2.dw",
+          "consumer": "aggregation.context2.pw",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.context2.pw",
+          "consumer": "aggregation.context2.add",
+          "roundtrip_bytes": 40960
+        },
+        {
+          "producer": "aggregation.up1.project",
+          "consumer": "aggregation.up1.resize",
+          "roundtrip_bytes": 30720
+        },
+        {
+          "producer": "aggregation.up1.resize",
+          "consumer": "aggregation.up1.add",
+          "roundtrip_bytes": 122880
+        },
+        {
+          "producer": "aggregation.decode1.dw",
+          "consumer": "aggregation.decode1.pw",
+          "roundtrip_bytes": 122880
+        },
+        {
+          "producer": "aggregation.up0.project",
+          "consumer": "aggregation.up0.resize",
+          "roundtrip_bytes": 81920
+        },
+        {
+          "producer": "aggregation.up0.resize",
+          "consumer": "aggregation.up0.add",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "aggregation.decode0.dw",
+          "consumer": "aggregation.decode0.pw",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "refine.block0.dw",
+          "consumer": "refine.block0.pw",
+          "roundtrip_bytes": 655360
+        },
+        {
+          "producer": "refine.block1.dw",
+          "consumer": "refine.block1.pw",
+          "roundtrip_bytes": 655360
+        },
+        {
+          "producer": "left.stem",
+          "consumer": "left.half.dw",
+          "roundtrip_bytes": 983040
+        },
+        {
+          "producer": "left.half.pw",
+          "consumer": "left.quarter.dw",
+          "roundtrip_bytes": 1310720
+        },
+        {
+          "producer": "left.res1.add",
+          "consumer": "left.projection",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "right.stem",
+          "consumer": "right.half.dw",
+          "roundtrip_bytes": 983040
+        },
+        {
+          "producer": "right.half.pw",
+          "consumer": "right.quarter.dw",
+          "roundtrip_bytes": 1310720
+        },
+        {
+          "producer": "right.res1.add",
+          "consumer": "right.projection",
+          "roundtrip_bytes": 327680
+        },
+        {
+          "producer": "refine.input_pool",
+          "consumer": "refine.entry",
+          "roundtrip_bytes": 655360
+        },
+        {
+          "producer": "refine.entry",
+          "consumer": "refine.block0.dw",
+          "roundtrip_bytes": 655360
+        },
+        {
+          "producer": "refine.block0.pw",
+          "consumer": "refine.block1.dw",
+          "roundtrip_bytes": 655360
+        },
+        {
+          "producer": "refine.block1.pw",
+          "consumer": "refine.residual_confidence",
+          "roundtrip_bytes": 655360
+        },
+        {
+          "producer": "refine.residual_confidence",
+          "consumer": "refine.full_residual_confidence",
+          "roundtrip_bytes": 163840
+        }
+      ]
+    },
+    "weight_bits": 16,
+    "activation_bits": 16,
+    "accuracy": "UNTRAINED_UNPROVED",
+    "physical_resources": "UNMEASURED",
+    "conditional_scenarios": [],
+    "postprocess": {
+      "median": "one native3x3 replicated border beforeguided",
+      "guided": "same sixboxes radius16epsilon1e-4"
+    }
+  }
+}
