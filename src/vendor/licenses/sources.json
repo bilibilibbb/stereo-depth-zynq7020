@@ -1,0 +1,50 @@
+[
+  {
+    "file": "xilinx_2018_3.txt",
+    "url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/xilinx-v2018.3/license.txt",
+    "sha256": "3e829b0a52cc0b7af2f4f0537bf6db926fe56681e6e1b339a8145a65491c86b8",
+    "retrieved_utc": "2026-10-27T21:32:18.313630+00:00"
+  },
+  {
+    "file": "lwip_2_0_2.txt",
+    "url": "https://raw.githubusercontent.com/lwip-tcpip/lwip/STABLE-2_0_2_RELEASE/COPYING",
+    "sha256": "8fb15ebdb19eb669e1d37fcd8e57a44c477fcc0e93a9ab0d181760965f94d5ed",
+    "retrieved_utc": "2026-10-27T21:32:19.554533+00:00"
+  },
+  {
+    "file": "fatfs_r013b.txt",
+    "source": "reference/fatfs/ff.c",
+    "source_sha256": "cdf775afd9bf4623072bbac042ab19f7af5ed5e4bfc58286e0c67ec790c5d0e6",
+    "sha256": "7f8036792668d3bd5954ac6851362f30dd2ce8a4591668ccbadc708cf9599992"
+  },
+  {
+    "file": "newlib_2_4.txt",
+    "source": "reference/compute/reference/newlib_2_4_math_diagnostic/COPYING.NEWLIB",
+    "sha256": "992848088cfd1a1a7807828dd8623385713aeba2e3c49f81d1bcefcb23645399"
+  },
+  {
+    "file": "desktop_pillow.txt",
+    "source": "stereo_demo/app/licenses/Pillow.txt",
+    "sha256": "4f7866a74802c6326f81faff59a56546b6aec2b10b91973e0e9308de95e79857"
+  },
+  {
+    "file": "desktop_pyinstaller.txt",
+    "source": "stereo_demo/app/licenses/PyInstaller.txt",
+    "sha256": "0598064c7d2718e38d7914a7d08343b2fa008e3bea9ebba2aa7a6ffa5900dd64"
+  },
+  {
+    "file": "desktop_python.txt",
+    "source": "stereo_demo/app/licenses/Python.txt",
+    "sha256": "886a0ead2d89030ee62dbff52b04e47ab91998341295bb9c56fb952b4e081c7a"
+  },
+  {
+    "file": "desktop_tcl.txt",
+    "source": "stereo_demo/app/licenses/tcl.txt",
+    "sha256": "c0a69a2bfd757361ec7e6143973b103c90409316b49e9c88db26ad6388e79f16"
+  },
+  {
+    "file": "desktop_tk.txt",
+    "source": "stereo_demo/app/licenses/Tk.txt",
+    "sha256": "0d1e4405f6273f091732764ed89b57066be63ce64869be6c71ea337dc4f2f9b5"
+  }
+]

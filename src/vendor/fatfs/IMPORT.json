@@ -1,0 +1,24 @@
+{
+  "installed_version": "SDK2018.3 xilffs_v4_0",
+  "headers_match_frozen_BSP": {
+    "ff.h": "a99a27f322389f94c3fa9345a8bfda4e94a024b22f61a7b06729d3c34e011f15",
+    "ffconf.h": "7e20f600743596f6e1fc9c5554374ef89a03bc40470cc94dd409b29fb58c31f4",
+    "diskio.h": "5f5e4f77725106ee065e4adad32206d10c9f8bdc8a096ddb4720dee0504b4169",
+    "integer.h": "55d0983d1455e342db1f2c8eef5210576fc406b74f52932a240efff2a12eb176"
+  },
+  "files": [
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\lib\\sw_services\\xilffs_v4_0\\src\\ff.c",
+      "target": "reference/fatfs/ff.c",
+      "bytes": 229019,
+      "sha256": "cdf775afd9bf4623072bbac042ab19f7af5ed5e4bfc58286e0c67ec790c5d0e6"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\lib\\sw_services\\xilffs_v4_0\\src\\diskio.c",
+      "target": "reference/fatfs/diskio.c",
+      "bytes": 14979,
+      "sha256": "7cb15544dcc61cfd994b54e7b457f8cb4f0813995a7a80926bb6d9980377f2b4"
+    }
+  ],
+  "scope": "Actual SD filesystem code, CPU0 initialization only. No board read/write performed by this import."
+}
