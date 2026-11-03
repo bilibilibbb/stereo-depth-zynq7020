@@ -1,8 +1,0 @@
-{
-  "environment": "HSI_PATH",
-  "launcher_sha256": "032247c9bd1bd6cb4d8433ba28c1d007c78909ed28da23654ebff018b18f6d0d",
-  "engine_relative": "unwrapped/win64.o/hsi.exe",
-  "engine_sha256": "8cbe2df7bd5f7018fef575f120976897aadd455ebf6b8049d04542bf2d269871",
-  "version": "SDK 2018.3 HSI",
-  "scope": "Local FSBL generation and compilation only."
-}

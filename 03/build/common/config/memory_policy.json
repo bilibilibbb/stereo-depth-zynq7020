@@ -1,9 +1,0 @@
-{
-  "mode": "owned_tree_below_live_available_v1",
-  "authority": "2026-10-21 direct user: 使用内存小于可用内存; 一旦超过就要停止想办法改变; 不用再局限于某个具体数字",
-  "usage": "max(sum of current owned-tree private commit, sum of current owned-tree working sets); historical peaks are not current use",
-  "constraint": "Owned job use must remain strictly below current physical available memory and current system commit headroom. Derive and update Windows process/tree commit caps from that inequality; no fixed GiB floor/cap or commit-percentage gate.",
-  "on_pressure": "Terminate only the owned job tree, retain diagnostics, then reduce residency, split or stream work, or release verified optional processes. Continue independent light work; do not retry an unchanged failure or stop the whole project.",
-  "shared_mutex": "Local\\StereoDepthConservativeWorker",
-  "scope": "Current project checks and platform generation; existing source/operation gates, single CPU, global single heavy worker and protected applications remain. Old numerical limits are historical, superseded by the latest direct user instruction."
-}
