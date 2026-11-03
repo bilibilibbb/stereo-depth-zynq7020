@@ -1,0 +1,47 @@
+{
+  "origin": "Official newlib 2.4.0 release, same six files as sourceware mirror tag; diagnostic only. Installed SDK identity requires output/disassembly evidence.",
+  "prefix": "https://raw.githubusercontent.com/mirror/newlib-cygwin/newlib-2_4_0/",
+  "files": [
+    {
+      "file": "ef_exp.c",
+      "bytes": 2793,
+      "sha256": "663f68da933a34c218c42591937045513b7a9a2c217c6889ed593a0ff7176979"
+    },
+    {
+      "file": "ef_log.c",
+      "bytes": 2518,
+      "sha256": "158e7e60f5c8cd0a1105712c9aaf54c706e0e634ac9a48d57e14c6ed4ec70c30"
+    },
+    {
+      "file": "sf_tanh.c",
+      "bytes": 1621,
+      "sha256": "67ff06bb3e0da32c6f275978ccbf447391d0c6383f3bf41ce15300c420b60abe"
+    },
+    {
+      "file": "sf_expm1.c",
+      "bytes": 3820,
+      "sha256": "206ce87dba068f17e452cb6046539b7351dddc837d50d713bfba28cc859e0996"
+    },
+    {
+      "file": "fdlibm_upstream.h",
+      "bytes": 11999,
+      "sha256": "a18cabd993fb59780beba878841f32af67c5a303b00e2a8cacb32f9c1389feba"
+    },
+    {
+      "file": "COPYING.NEWLIB",
+      "bytes": 50155,
+      "sha256": "992848088cfd1a1a7807828dd8623385713aeba2e3c49f81d1bcefcb23645399"
+    }
+  ],
+  "failed_attempt": "sf_expm1.c is in common, not math; first download saved the other three sources, then HTTP404.",
+  "official_release": "https://sourceware.org/ftp/newlib/newlib-2.4.0.tar.gz",
+  "archive_sha256": "545b3d235e350d2c61491df8b9f775b1b972f191380db8f52ec0b1c829c52706",
+  "official_archive_matches": [
+    "fdlibm_upstream.h",
+    "sf_expm1.c",
+    "ef_exp.c",
+    "ef_log.c",
+    "sf_tanh.c",
+    "COPYING.NEWLIB"
+  ]
+}

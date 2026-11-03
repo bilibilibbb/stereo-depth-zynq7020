@@ -1,0 +1,230 @@
+{
+  "sdk": "2018.3",
+  "lwip": "2.0.2 / lwip202_v1_2",
+  "gem": "emacps_v3_8",
+  "scope": "Unmodified installed vendor sources; explicit application options and polled netif are separate. Not a generated network BSP or board proof.",
+  "files": [
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\def.c",
+      "path": "lwip/core/def.c",
+      "bytes": 6470,
+      "sha256": "fa5ceb21c18c36994c5d82e88538c2e90967409d66f28acb627e97e5570785e7"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\dns.c",
+      "path": "lwip/core/dns.c",
+      "bytes": 51218,
+      "sha256": "a30d727aa6280b640aab303d8f4d1a842140a082ad2f146d196c0e412243a138"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\inet_chksum.c",
+      "path": "lwip/core/inet_chksum.c",
+      "bytes": 19051,
+      "sha256": "3fdc2b64796338103291c1a183a3911cc6770760dc7aa9e86a2d99fa16486cce"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\init.c",
+      "path": "lwip/core/init.c",
+      "bytes": 17480,
+      "sha256": "89bbb0791f45335b197ec64d9b6ca3685d090b7e26895993f6ecb6522965f4d0"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\ip.c",
+      "path": "lwip/core/ip.c",
+      "bytes": 3557,
+      "sha256": "1cf298c2f0475aa7190aa39c29a5286f61f36689d3a58b083a85d3ee26f9a164"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\ipv4\\autoip.c",
+      "path": "lwip/core/ipv4/autoip.c",
+      "bytes": 18218,
+      "sha256": "9f9de3392eb442037ace4fcf001e338e3ed0455ca6c4d3ee90b88bab91eb4143"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\ipv4\\dhcp.c",
+      "path": "lwip/core/ipv4/dhcp.c",
+      "bytes": 71807,
+      "sha256": "c753af172032f7e561bdaeacb33d5aa9b4994069df59e5a146b15ba9ffdeea2f"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\ipv4\\etharp.c",
+      "path": "lwip/core/ipv4/etharp.c",
+      "bytes": 45387,
+      "sha256": "a4b0a31adffb53234208663a3c24f00070263a4aded2ccf2b286ffcb5b9fe85f"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\ipv4\\icmp.c",
+      "path": "lwip/core/ipv4/icmp.c",
+      "bytes": 13779,
+      "sha256": "1856a4d4e0a9151757907802ab9ce374979c4c27aca583ef6495984a3a3fc555"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\ipv4\\igmp.c",
+      "path": "lwip/core/ipv4/igmp.c",
+      "bytes": 27645,
+      "sha256": "501199b1fedc51ed346cc143964c0e7dac23347d58df03fffd98864dd007cb40"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\ipv4\\ip4.c",
+      "path": "lwip/core/ipv4/ip4.c",
+      "bytes": 38983,
+      "sha256": "b5a8888798f2a50fbe0df42db5d8c0f93bbf0319fadcaf58e49fc210728d2712"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\ipv4\\ip4_addr.c",
+      "path": "lwip/core/ipv4/ip4_addr.c",
+      "bytes": 9000,
+      "sha256": "8b1019b0e51c6467dcdaaa402bf92d668171b2b8347df43ce2ca4dbc23166255"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\ipv4\\ip4_frag.c",
+      "path": "lwip/core/ipv4/ip4_frag.c",
+      "bytes": 27711,
+      "sha256": "7571374a0f14713e77a6531f56252e553c23cfcabe5a686b16116a3ce1bada60"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\mem.c",
+      "path": "lwip/core/mem.c",
+      "bytes": 27052,
+      "sha256": "f261244fd970edbfb3bdac3edef12cb528add987dd413b2d2b617543fe86da55"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\memp.c",
+      "path": "lwip/core/memp.c",
+      "bytes": 13334,
+      "sha256": "976ba128220c87d4bb8e6b6e37f327a68a4e53b22aa0976513fbaee033fbb56d"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\netif.c",
+      "path": "lwip/core/netif.c",
+      "bytes": 37497,
+      "sha256": "55bf85ad1f1c42abca0d41bfaa1daa3c16b9d622adf97db24550e2e698825dde"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\pbuf.c",
+      "path": "lwip/core/pbuf.c",
+      "bytes": 46822,
+      "sha256": "72470b6cb3d4eb01e69bd8930894321799711b6038902745689e4b720bb57eea"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\raw.c",
+      "path": "lwip/core/raw.c",
+      "bytes": 15548,
+      "sha256": "7d42f4a525623f764daae3e0fadfd6e18698050a4b6c37c4eb4f7bdd8a5f397c"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\stats.c",
+      "path": "lwip/core/stats.c",
+      "bytes": 6100,
+      "sha256": "df3acae1ae047127ddffa9e37da6dffdcc26f26c7570b7de1343dbbd66c9003d"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\sys.c",
+      "path": "lwip/core/sys.c",
+      "bytes": 3394,
+      "sha256": "f822ddd3b1088cf22b5ea0abce52aa501c88f72618418266ddc81ea2e28297c6"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\tcp.c",
+      "path": "lwip/core/tcp.c",
+      "bytes": 67070,
+      "sha256": "c91a3e9347f8f821798c9f3bee73d447d54897e9ebe3219a87c86c8fe4185bad"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\tcp_in.c",
+      "path": "lwip/core/tcp_in.c",
+      "bytes": 68815,
+      "sha256": "e2946a03de1e7184a5f4e0b94df37a8efe77858554278113e7ad93398dd28365"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\tcp_out.c",
+      "path": "lwip/core/tcp_out.c",
+      "bytes": 57659,
+      "sha256": "1525ab28ba0ce09a795e348be266dfc7cdd464636ae1f4942c22cb23405fc31c"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\timeouts.c",
+      "path": "lwip/core/timeouts.c",
+      "bytes": 12497,
+      "sha256": "6d81cc0b7d0e45fbc05504636fb04cbf467593d8b327011268803078220509fd"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\core\\udp.c",
+      "path": "lwip/core/udp.c",
+      "bytes": 38830,
+      "sha256": "7d546535df839c1511fbe59b17b2f5b4d966cb18698dc9f09c8dd09b45b4d4be"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\ThirdParty\\sw_services\\lwip202_v1_2\\src\\lwip-2.0.2\\src\\netif\\ethernet.c",
+      "path": "lwip/netif/ethernet.c",
+      "bytes": 11276,
+      "sha256": "b3e08b188aace329f0c5409c5250582d9f238069489734b7a2f4ca3fb18b2d82"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps.c",
+      "path": "gem/xemacps.c",
+      "bytes": 17879,
+      "sha256": "b7e580ae94369498eb44ecfe7b8208f5f943ade4c109774e9cf137a1dfa020a4"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps.h",
+      "path": "gem/xemacps.h",
+      "bytes": 33601,
+      "sha256": "0d3facaf44dcd69304b9bd7de7af4aed3f11b61806e19675d0d89bc96509d62d"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps_bd.h",
+      "path": "gem/xemacps_bd.h",
+      "bytes": 28358,
+      "sha256": "29e79562498cc3a92eb14a844a14a5c39e88c3aa6ac04426f744675e6ae33bf6"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps_bdring.c",
+      "path": "gem/xemacps_bdring.c",
+      "bytes": 38670,
+      "sha256": "3f8ed1ee4f806073096f5abab8c2ecc05d1fca53dbfea9c113c67414f890c35b"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps_bdring.h",
+      "path": "gem/xemacps_bdring.h",
+      "bytes": 9303,
+      "sha256": "c72cee36272c94dc2bb3e5c52ffe7caf95c059b70d0a548eb2a7117f3ec11e18"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps_control.c",
+      "path": "gem/xemacps_control.c",
+      "bytes": 40775,
+      "sha256": "7a98dafced0d1ac997ba8471ce398455ea9b3082678b4a95d7a3801aa822156d"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps_g.c",
+      "path": "gem/xemacps_g.c",
+      "bytes": 3386,
+      "sha256": "f4a78cf06868a373850e9c8e3e65cb888cbbc44d9b5e4d495f02a27fc4cc6fb9"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps_hw.c",
+      "path": "gem/xemacps_hw.c",
+      "bytes": 4752,
+      "sha256": "62135fd44f66d8fcae29152deeb2afee1bdc8d7ea780af13b0eaacf3d5517c13"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps_hw.h",
+      "path": "gem/xemacps_hw.h",
+      "bytes": 32843,
+      "sha256": "31edea52c077c4f06b7647bc741c826665c952f09314a2b29258911b67db15f5"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps_intr.c",
+      "path": "gem/xemacps_intr.c",
+      "bytes": 9947,
+      "sha256": "ca2b05bb594a3dc98eda1ffd2d385fcde017cf3aaffba3b68a8e0bfade5765fc"
+    },
+    {
+      "source": "D:\\vivado_18.3\\SDK\\2018.3\\data\\embeddedsw\\XilinxProcessorIPLib\\drivers\\emacps_v3_8\\src\\xemacps_sinit.c",
+      "path": "gem/xemacps_sinit.c",
+      "bytes": 3511,
+      "sha256": "eccc9bf18738ae4be5f6d2fa3be967399488a7d7d7925e91e90505d8500609c8"
+    }
+  ]
+}
