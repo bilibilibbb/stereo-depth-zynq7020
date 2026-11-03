@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-11-01T16:48:16.930628+00:00",
+  "status": "TEAM_CONFIRMED_ALL_SIX_PYNQ_SKILLS_HARDWARE_VALIDATED",
+  "board": "PYNQ-Z2",
+  "board_source": "Borrowed from the university",
+  "validation_performer": "Project team, reported directly by the user",
+  "user_statements": [
+    "我已经通过借用校方板卡验证了你的pynq技能了",
+    "pynqz2",
+    "全部验证 你概括地写就好"
+  ],
+  "coverage": [
+    "pynq-overlay-contract",
+    "pynq-dma-buffer-reuse",
+    "pynq-register-driver",
+    "pynq-tensor-contract",
+    "pynq-stage-profiling",
+    "pynq-reproducible-runs"
+  ],
+  "details": "General hardware validation confirmed by the team; PYNQ version, per-test logs and timing were not supplied.",
+  "agent_ran_hardware_tests": false,
+  "additional_benchmark_numbers_claimed": false,
+  "existing_39_offboard_tests": "Preserved as separate executable-script evidence; not relabelled as hardware tests.",
+  "stereo_demo_runtime": "Bare metal, unchanged"
+}

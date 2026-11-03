@@ -1,0 +1,3 @@
+interface:
+  display_name: "DMA 缓存与有限缓冲归属"
+  short_description: "按数据生产与释放关系审查并行安全和等待。保留实际条件与验证范围。"

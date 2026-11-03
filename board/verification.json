@@ -1,0 +1,22 @@
+{
+  "status": "VIVADO_2026_SD_BOOT_REAL_PREVIEW_AND_PAIR_VERIFIED",
+  "checked_utc": "2026-11-02T08:45:05.650298+00:00",
+  "tool_scope": "Vivado 2026.1 hardware and Bootgen; retained accepted SDK 2018.3 ARM application and FSBL.",
+  "boot_sha256": "056cc6568f5faa7ba949f2adb95949d00654dfce718a67f8bcc99d88ad9faa25",
+  "saved_pair_shot": 6,
+  "current_session_real_preview_and_pair": true,
+  "packet_crc_format_domain_checks": true,
+  "visual_review": "Native window shows live video, captured photograph, SGM and small-model results.",
+  "numerical_scope": "Real camera packets, format/CRC/numerical-domain/session checks; no new numerical golden equivalence claim.",
+  "archived_record_sha256": "16f596515dbec71adcc8c0bafd837290151b153e093ec40942fa0ecbb163f75f",
+  "distribution": {
+    "method": "Equal-length normalization of build-directory strings in diagnostics and symbol paths.",
+    "original_application_sha256": "25d639803ece0e85a755bf920f1e853f09fb08db6daa8e72892668c2378ecb69",
+    "application_sha256": "40ba836539ff0cc805ac098868b52c67a078dde2bbc93381932340ccad364356",
+    "original_boot_sha256": "056cc6568f5faa7ba949f2adb95949d00654dfce718a67f8bcc99d88ad9faa25",
+    "boot_sha256": "8a3b2f398699974d06753cda0b62e0cc0c407dc2ecfa494b564c8c34e26204ee",
+    "executable_instructions_and_addresses_unchanged": true,
+    "bootgen_repack_verified": true,
+    "new_board_operations": 0
+  }
+}

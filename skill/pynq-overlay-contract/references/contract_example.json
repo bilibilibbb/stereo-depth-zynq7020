@@ -1,0 +1,10 @@
+{
+  "ip_name": "accelerator/dma_0",
+  "vlnv": "xilinx.com:ip:axi_dma:7.1",
+  "address_alignment": 4,
+  "minimum_address_range": 256,
+  "parameters": {
+    "C_INCLUDE_SG": 0,
+    "C_SG_LENGTH_WIDTH": 23
+  }
+}

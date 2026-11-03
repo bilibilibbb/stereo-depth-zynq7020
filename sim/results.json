@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-27T07:06:44.842824+00:00",
+  "actual_RTL": true,
+  "actual_vendor_DSP48E1_model": true,
+  "complete_distinct_outputs": 1,
+  "SGM_runs": 1,
+  "complete_output_values": 81920,
+  "bit_mismatches": 0,
+  "output_sha256": "3e3ddf94803b332921622b4bfcf2ab1e8958ea8dc6aef58ce1c041f4bdc3cf03",
+  "coverage": "Actual production RGB preparation/Census, once-only complete SGM RTL, all six inputs, complete current legacy C task graph/CPU1 range and FIELD/streams, actual NN/INTEGER/context/BOX RTL and leased dualHP DMA; full bitwise output and pair CRC.",
+  "exclusions": [
+    "No actual A9 CPU execution/cache/MMU or PS7/physical DDR",
+    "No real camera, calibration, preview/network concurrent load",
+    "One complete frame, no production cadence or timing claim"
+  ],
+  "scope": "Summary of completed full-chain RTL numerical verification; current rerunnable checks are listed in README.md.",
+  "archived_record_sha256": "6286523a43525dd08873cb0a69bf45a1cd310549d844946f480e6c60e208e4c1",
+  "rerunnable_checks": {
+    "checked_utc": "2026-11-03T15:32:02.893368+00:00",
+    "source_restore_2018_3_and_2026_1": "PASS",
+    "result_slots_and_export": "PASS",
+    "three_dma_short_burst_simulations": "PASS",
+    "desktop_protocol_and_display": "PASS",
+    "board_sample_crc_and_image_replay": "PASS",
+    "arm_compile_and_link": "PASS (build only)",
+    "host_graph_reference_comparison": "PASS",
+    "new_synthesis_or_board_operations": 0
+  }
+}

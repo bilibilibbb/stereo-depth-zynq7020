@@ -1,0 +1,4 @@
+interface:
+  display_name: "PYNQ 可复现运行与 Notebook 状态恢复"
+  short_description: "将 PYNQ Notebook 试验整理成可重复入口，绑定环境、位流、输入和契约，处理乱序执行、旧 Overl"
+  default_prompt: "使用 $pynq-reproducible-runs 整理当前 PYNQ 工程，给出可运行方法和验证依据。"

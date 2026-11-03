@@ -1,0 +1,4 @@
+interface:
+  display_name: "神经网络算术与存储的 FPGA 映射"
+  short_description: "将定点卷积、逐通道卷积和张量运算映射为可控的 FPGA DSP、缓存与流水结构，核对累加范围、存储端口、资源复"
+  default_prompt: "使用 $fpga-nn-arithmetic-mapping 分析当前工程，给出可执行改动、依据与验证范围。"

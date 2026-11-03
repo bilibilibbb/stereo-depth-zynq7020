@@ -1,0 +1,23 @@
+[
+  {
+    "name": "input",
+    "offset": 0,
+    "bytes": 1024,
+    "birth": 0,
+    "last_consumer": 2
+  },
+  {
+    "name": "features",
+    "offset": 1024,
+    "bytes": 512,
+    "birth": 1,
+    "last_consumer": 3
+  },
+  {
+    "name": "output",
+    "offset": 0,
+    "bytes": 256,
+    "birth": 3,
+    "last_consumer": 4
+  }
+]

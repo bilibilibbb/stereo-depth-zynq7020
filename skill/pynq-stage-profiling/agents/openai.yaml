@@ -1,0 +1,4 @@
+interface:
+  display_name: "PYNQ 分阶段性能测量"
+  short_description: "在 PYNQ 加速任务中分离初始化、输入准备、命令提交、传输完成和结果消费，复用缓冲与原始事件估计实际瓶颈，避"
+  default_prompt: "使用 $pynq-stage-profiling 整理当前 PYNQ 工程，给出可运行方法和验证依据。"

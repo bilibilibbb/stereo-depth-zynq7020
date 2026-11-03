@@ -1,0 +1,4 @@
+interface:
+  display_name: "通用 PYNQ Overlay 与硬件契约核对"
+  short_description: "在 PYNQ 更换题目、板卡或 Overlay 时核对 bit/HWH 来源、IP 元数据和寄存器契约，避免旧"
+  default_prompt: "使用 $pynq-overlay-contract 分析当前工程，给出可执行改动、依据与验证范围。"

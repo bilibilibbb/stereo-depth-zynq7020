@@ -1,0 +1,4 @@
+interface:
+  display_name: "PYNQ 神经网络张量与定点数据核对"
+  short_description: "定位 PYNQ 神经网络加速器结果错误中的 CHW/HWC、dtype、字节序、量化与填充差异，建立可重复的原"
+  default_prompt: "使用 $pynq-tensor-contract 整理当前 PYNQ 工程，给出可运行方法和验证依据。"

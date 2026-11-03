@@ -1,0 +1,4 @@
+interface:
+  display_name: "双核与 PL 的行块流水设计"
+  short_description: "在双核 ARM 与共享 FPGA 加速器间重构就绪粒度、任务归属和有限缓冲，以完整处理链净收益选择并行与资源复"
+  default_prompt: "使用 $heterogeneous-row-pipeline 分析当前工程，给出可执行改动、依据与验证范围。"

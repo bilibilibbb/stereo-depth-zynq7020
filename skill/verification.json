@@ -1,0 +1,338 @@
+{
+  "skills": [
+    {
+      "name": "bounded-build-memory",
+      "structure": "Skill is valid!",
+      "sha256": "0474c222ec405637b126369738984c7879c9b6a1da5d6cf62bb6e437dd45b92c"
+    },
+    {
+      "name": "dma-buffer-ownership",
+      "structure": "Skill is valid!",
+      "sha256": "f0c4bc12d50d2ca89620da42e2a22cda1a7427fa900725275acaf712349b57ab"
+    },
+    {
+      "name": "fixed-graph-memory-fusion",
+      "structure": "Skill is valid!",
+      "sha256": "7a96d7e524f2a9bdd62a456744426f2cbeb939a1036fa762b78e48756db9ad12"
+    },
+    {
+      "name": "fpga-evidence-binding",
+      "structure": "Skill is valid!",
+      "sha256": "8a499da3dd730e17e7569605c974b15597740812f8e654021ac3a2228626f56b"
+    },
+    {
+      "name": "fpga-nn-arithmetic-mapping",
+      "structure": "Skill is valid!",
+      "sha256": "2aa93d44c27851e5f30a818b13094fb6837b7d7fa907d6788dcf5bf4bedf43af"
+    },
+    {
+      "name": "heterogeneous-row-pipeline",
+      "structure": "Skill is valid!",
+      "sha256": "8c76f965f5260906a7b3dcae738c3fddd95f44566603eb268e204bfce0b3392c"
+    },
+    {
+      "name": "ps-pl-timing-evidence",
+      "structure": "Skill is valid!",
+      "sha256": "598278ae9c6549be0188e32219ec074c6e3011dbee9c21cfe238a93588687da2"
+    },
+    {
+      "name": "pynq-dma-buffer-reuse",
+      "structure": "Skill is valid!",
+      "sha256": "5298d8f40e408b5d9a68e88c0b020be57838f856e3d68e0e6acec34e863c2868"
+    },
+    {
+      "name": "pynq-overlay-contract",
+      "structure": "Skill is valid!",
+      "sha256": "dc4aca6494a0d4ffdba1fd44057a6a1e7fb4b7a9dbb46cf18e15a34c7ef7825a"
+    },
+    {
+      "name": "pynq-register-driver",
+      "structure": "Skill is valid!",
+      "sha256": "32e5d22ffaaa687ee4b2296ba880576cb68d54089287ca3b174d9a3a3fe7c66d"
+    },
+    {
+      "name": "pynq-reproducible-runs",
+      "structure": "Skill is valid!",
+      "sha256": "444ec3780f8e3123370eb5330a2c2ddd02b794606ca34adc1ee64d5dc0abe6fe"
+    },
+    {
+      "name": "pynq-stage-profiling",
+      "structure": "Skill is valid!",
+      "sha256": "dd51c07e38bfa89616d1a2d5e94b875e75c90edd81b59165d88fa07ea3ccffcb"
+    },
+    {
+      "name": "pynq-tensor-contract",
+      "structure": "Skill is valid!",
+      "sha256": "971fecd011865a8aa35fead4cf1da5fe79981bad0f8763e22c4be52c1f0dc235"
+    }
+  ],
+  "offline_tests": 39,
+  "smoke_examples": [
+    {
+      "entry": "bounded-build-memory/scripts/guard_budget.py",
+      "result": {
+        "action": "continue_with_monitor",
+        "used_bytes": 805306368,
+        "remaining_bytes": 2147483648,
+        "job_commit_cap_bytes": 1207955456,
+        "additional_commit_bytes": 671084544
+      }
+    },
+    {
+      "entry": "fixed-graph-memory-fusion/scripts/lifetime_check.py",
+      "result": {
+        "valid": true,
+        "conflicts": [],
+        "allocation_bytes": 1536,
+        "peak_live_bytes": 1536,
+        "scope": "Serialized, inclusive event indexes; asynchronous consumers must extend lifetimes."
+      }
+    },
+    {
+      "entry": "fpga-nn-arithmetic-mapping/scripts/accumulator_bound.py",
+      "result": {
+        "minimum": -17591649173504,
+        "maximum": 17592186044416,
+        "signed_bits": 46,
+        "scope": "Independent operand range bound; add zero-point correction, bias and rescale stages separately."
+      }
+    },
+    {
+      "entry": "pynq-overlay-contract/scripts/overlay_contract.py",
+      "result": {
+        "ip_name": "accelerator/dma_0",
+        "vlnv": "xilinx.com:ip:axi_dma:7.1",
+        "phys_addr": 1077936128,
+        "addr_range": 65536,
+        "scope": "Metadata contract only; inspect clocks, resets and data path for the target board."
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "bounded-build-memory/agents/openai.yaml",
+      "sha256": "045c2b7f4484d0c04ef558473a436ac893e981286c09c2c31c946ece2e180656"
+    },
+    {
+      "path": "bounded-build-memory/references/case.md",
+      "sha256": "f2d242b4cb1a42dbd05623f3db719efc06f319e1e2eeb87dc2da16d6fb7217e7"
+    },
+    {
+      "path": "bounded-build-memory/scripts/guard_budget.py",
+      "sha256": "9b87c50f1378925cd8db9089890e52bf0e80663ac1b3721020307f8298a9518d"
+    },
+    {
+      "path": "bounded-build-memory/SKILL.md",
+      "sha256": "0474c222ec405637b126369738984c7879c9b6a1da5d6cf62bb6e437dd45b92c"
+    },
+    {
+      "path": "dma-buffer-ownership/agents/openai.yaml",
+      "sha256": "363d1341ace9413965c46828822a575327e8b5d8ce0953842439a6560d46d39a"
+    },
+    {
+      "path": "dma-buffer-ownership/references/case.md",
+      "sha256": "97f1fd1bb0674a868b1c1ffae9f4ef2c3dc735851dc53bcd7e937b8857cd0869"
+    },
+    {
+      "path": "dma-buffer-ownership/SKILL.md",
+      "sha256": "f0c4bc12d50d2ca89620da42e2a22cda1a7427fa900725275acaf712349b57ab"
+    },
+    {
+      "path": "fixed-graph-memory-fusion/agents/openai.yaml",
+      "sha256": "fdb1e60303c0709ed5ddd390c0f71fe98ef9403de7b56913c7243620fa7bca96"
+    },
+    {
+      "path": "fixed-graph-memory-fusion/references/case.md",
+      "sha256": "d99b9c5b87963bfe1e025047799365363660be878c20cd0ea4d182f165e0d6cc"
+    },
+    {
+      "path": "fixed-graph-memory-fusion/references/layout_example.json",
+      "sha256": "0b019c799449c0d6e582be493f5aa32c4275e54a7d21305299b7da3062c23ebd"
+    },
+    {
+      "path": "fixed-graph-memory-fusion/scripts/lifetime_check.py",
+      "sha256": "91b43268b28a022b347e704cc03cd3ae2bb248b8a41db5c400c173881c55b2c4"
+    },
+    {
+      "path": "fixed-graph-memory-fusion/SKILL.md",
+      "sha256": "7a96d7e524f2a9bdd62a456744426f2cbeb939a1036fa762b78e48756db9ad12"
+    },
+    {
+      "path": "fpga-evidence-binding/agents/openai.yaml",
+      "sha256": "f5fea041c5d469a67341bd3111f725af5cac3906a5e90399a4a51e410452e8a4"
+    },
+    {
+      "path": "fpga-evidence-binding/references/case.md",
+      "sha256": "cc97605b5de150222592ea870ba03d0e6d26b68676e267029cb71c0b494bde06"
+    },
+    {
+      "path": "fpga-evidence-binding/SKILL.md",
+      "sha256": "8a499da3dd730e17e7569605c974b15597740812f8e654021ac3a2228626f56b"
+    },
+    {
+      "path": "fpga-nn-arithmetic-mapping/agents/openai.yaml",
+      "sha256": "3f2f09087a32cc57332b89f8962224971c348ebc7915065d1ef3e93c218ee373"
+    },
+    {
+      "path": "fpga-nn-arithmetic-mapping/references/case.md",
+      "sha256": "bd3aa773d3600962fbbb3dc2f034d7cfc5be02bce5e6a7c44e562db845f2eaa9"
+    },
+    {
+      "path": "fpga-nn-arithmetic-mapping/scripts/accumulator_bound.py",
+      "sha256": "501fe23d66c9eeadcb3103d4c4605b5499bf12ba8e44e3601753e0ab9947f860"
+    },
+    {
+      "path": "fpga-nn-arithmetic-mapping/SKILL.md",
+      "sha256": "2aa93d44c27851e5f30a818b13094fb6837b7d7fa907d6788dcf5bf4bedf43af"
+    },
+    {
+      "path": "hardware_validation.json",
+      "sha256": "c1b482836c0cafb787d2ae431bf72fb0f099fd01260e675dfbbc1970ea23b291"
+    },
+    {
+      "path": "heterogeneous-row-pipeline/agents/openai.yaml",
+      "sha256": "79a4f070acc33b87983b80bde998c94e3bd0925190f888c9f7449e9cd403e673"
+    },
+    {
+      "path": "heterogeneous-row-pipeline/references/case.md",
+      "sha256": "325b8b345cdfa9ceba2c1a06ed71c105ef67bd12587bf4848426b2a871e1ffe1"
+    },
+    {
+      "path": "heterogeneous-row-pipeline/SKILL.md",
+      "sha256": "8c76f965f5260906a7b3dcae738c3fddd95f44566603eb268e204bfce0b3392c"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "f96b192d5d7ab2703e2dc51f77318eeca4eb804f5d9f94c27dcd01ab07adff7a"
+    },
+    {
+      "path": "ps-pl-timing-evidence/agents/openai.yaml",
+      "sha256": "a7ff6cca7cbba7434dfe13fbf04ba39bd85ed10c56b738589e06017e38cd87c9"
+    },
+    {
+      "path": "ps-pl-timing-evidence/references/case.md",
+      "sha256": "2365b4e38b96947f938164681833886dbd1b127d480f3c872825411d54905452"
+    },
+    {
+      "path": "ps-pl-timing-evidence/SKILL.md",
+      "sha256": "598278ae9c6549be0188e32219ec074c6e3011dbee9c21cfe238a93588687da2"
+    },
+    {
+      "path": "pynq-dma-buffer-reuse/agents/openai.yaml",
+      "sha256": "30de985d852cb66d821b0f6708351a9bb6ff0acad2416227a6d9969c56429a95"
+    },
+    {
+      "path": "pynq-dma-buffer-reuse/references/case.md",
+      "sha256": "7661a43f39fa9fc2d5ce7764cb826e1b081a835ae833767770bf4cb90f2f13b7"
+    },
+    {
+      "path": "pynq-dma-buffer-reuse/scripts/dma_session.py",
+      "sha256": "b4010654f685682907d30ef21d9d1ccb551500eac2ff535b5adb87b0dc10c61b"
+    },
+    {
+      "path": "pynq-dma-buffer-reuse/SKILL.md",
+      "sha256": "5298d8f40e408b5d9a68e88c0b020be57838f856e3d68e0e6acec34e863c2868"
+    },
+    {
+      "path": "pynq-overlay-contract/agents/openai.yaml",
+      "sha256": "16570e5f1f6a0195b36a45bc60a49a893fa77798543e6e1d38d8e88dcf0e2f22"
+    },
+    {
+      "path": "pynq-overlay-contract/references/case.md",
+      "sha256": "3ea65de44140cd92e09af0f6477df81f14661e11530f49a3793ce01f75ed3bf5"
+    },
+    {
+      "path": "pynq-overlay-contract/references/contract_example.json",
+      "sha256": "7857edb3569b0dd38ef045213d657644dcbbe88b9df64a638f34fd3d2c70a216"
+    },
+    {
+      "path": "pynq-overlay-contract/references/ip_dict_example.json",
+      "sha256": "e3927d2f35975a440ff8e1974f59b1ef6fded29e4fd50862a1277a7cb091b9a2"
+    },
+    {
+      "path": "pynq-overlay-contract/scripts/overlay_contract.py",
+      "sha256": "48ecfbdcb5bd37298941537759a3a75c3c2b03e31d4c0140515e4da60d865756"
+    },
+    {
+      "path": "pynq-overlay-contract/SKILL.md",
+      "sha256": "dc4aca6494a0d4ffdba1fd44057a6a1e7fb4b7a9dbb46cf18e15a34c7ef7825a"
+    },
+    {
+      "path": "pynq-register-driver/agents/openai.yaml",
+      "sha256": "2bbfea104ce37cb65a74747ced50e5d1cb05733c8d11c69931e1c4717b53b58d"
+    },
+    {
+      "path": "pynq-register-driver/references/case.md",
+      "sha256": "397b1b9e8e4cb88d4583887ca10e04ec954ec73390118c18044b3ced91780d84"
+    },
+    {
+      "path": "pynq-register-driver/scripts/register_plan.py",
+      "sha256": "6cb16a8b3bc7505c7d17533d60677906ef132a5a8f2dc010955370508440aa58"
+    },
+    {
+      "path": "pynq-register-driver/SKILL.md",
+      "sha256": "32e5d22ffaaa687ee4b2296ba880576cb68d54089287ca3b174d9a3a3fe7c66d"
+    },
+    {
+      "path": "pynq-reproducible-runs/agents/openai.yaml",
+      "sha256": "fe4c6b9fdc119edba6e716852f586ef4b968d43eac7dc8affc2748f08fe2563a"
+    },
+    {
+      "path": "pynq-reproducible-runs/references/case.md",
+      "sha256": "5d96a48535f42e64286211801754de333019abb7c22d914061f29c1e444f4249"
+    },
+    {
+      "path": "pynq-reproducible-runs/scripts/run_manifest.py",
+      "sha256": "1db51eb790a36b7ffbbf51e0d5fbd0d347057bdc51806489df6c76f731c4ef02"
+    },
+    {
+      "path": "pynq-reproducible-runs/SKILL.md",
+      "sha256": "444ec3780f8e3123370eb5330a2c2ddd02b794606ca34adc1ee64d5dc0abe6fe"
+    },
+    {
+      "path": "pynq-stage-profiling/agents/openai.yaml",
+      "sha256": "4ff08da1cfb818817bfca18a85de54ed168225ae48f3fc488af1b3fc1240624e"
+    },
+    {
+      "path": "pynq-stage-profiling/references/case.md",
+      "sha256": "b8da7c514ee41f92d25175c25ba0606c8b1fa1c4f521e1a95034034642cd8d2a"
+    },
+    {
+      "path": "pynq-stage-profiling/scripts/stage_timing.py",
+      "sha256": "d4e32149308d24ba8ee6c11ac7672b05afc459859707350006c23a00eb1eb52b"
+    },
+    {
+      "path": "pynq-stage-profiling/SKILL.md",
+      "sha256": "dd51c07e38bfa89616d1a2d5e94b875e75c90edd81b59165d88fa07ea3ccffcb"
+    },
+    {
+      "path": "pynq-tensor-contract/agents/openai.yaml",
+      "sha256": "a7bf2338892a64f85d0ce1b20bce5a1f674c425624f040e95441bd23b2c9cb72"
+    },
+    {
+      "path": "pynq-tensor-contract/references/case.md",
+      "sha256": "06d9789edb617141d95fef7e0a9ded1e0e1016cc89a552a9b60b71a1c9a65dea"
+    },
+    {
+      "path": "pynq-tensor-contract/scripts/tensor_contract.py",
+      "sha256": "d708c3f1b36d30b7dd296146d70112fefde56caa087fafe9532f51e5e256945b"
+    },
+    {
+      "path": "pynq-tensor-contract/SKILL.md",
+      "sha256": "971fecd011865a8aa35fead4cf1da5fe79981bad0f8763e22c4be52c1f0dc235"
+    },
+    {
+      "path": "README.md",
+      "sha256": "401f99741c34db6c63d3564dac20de5da92152120e6152bec3cec7517bdc9974"
+    },
+    {
+      "path": "tests/test_skill_helpers.py",
+      "sha256": "bee46ffc6be5c34e85ca13a5095ab8d7162eb4dcd0276af280b9d188765abdf6"
+    }
+  ],
+  "hardware_validation": "hardware_validation.json",
+  "status": "VERIFIED",
+  "checked_utc": "2026-11-03T16:02:00.808298+00:00",
+  "verification_scope": "39 offline helper tests; six PYNQ skills validated by the team on PYNQ-Z2.",
+  "pynq_board_validation": true
+}

@@ -1,0 +1,44 @@
+{
+  "source_packet": "data/accepted_pair.sdp",
+  "source_sha256": "5d33c5b354a01fbd2f2c5585aeb2723cd96fec5fcff03148ab63fbe44c7da16d",
+  "production_renderer": "desktop_app/render.py",
+  "renderer_sha256": "63b5a2fb5fe4c922daa01ce79b0c3a33ec0e790a3001a0d4e55082bb2aa6997b",
+  "image_policy": "Decode by unchanged production renderer; fixed disparity colors; common validity mask; no retouching or inference on PC.",
+  "header": {
+    "kind": 2,
+    "size": 691240,
+    "crc": 2949554397,
+    "boot": 6592711727765258248,
+    "shot": 54,
+    "epoch": 1,
+    "attempt": 1,
+    "trigger_us": 623243372,
+    "locked_us": 622006759,
+    "sgm_done_us": 622130143,
+    "model_done_us": 623006299,
+    "model_id": 11459,
+    "width": 320,
+    "height": 240,
+    "format": 5,
+    "flags": 0,
+    "status": 0,
+    "error": 0
+  },
+  "source": {
+    "frame": 545,
+    "epoch": 545,
+    "attempt": 1,
+    "capture_started_us": 621864116,
+    "capture_ready_us": 621897234,
+    "selected_us": 623264839,
+    "result_age_ms": 1367.605,
+    "completed_age_ms": 258.54,
+    "request_wait_ms": 21.467
+  },
+  "assets": {
+    "accepted_photo.png": "c2e9f74a11ad2d0a4b6a43eb3f59f51e57c2b379a117aff54b2f5009175bb73d",
+    "accepted_sgm.png": "e403e45a4ffcd7b7bb09ea908dea1dde28d3b0ba616d9e6d8d8c8169897d790a",
+    "accepted_model.png": "2ff2140aa8265e5279d9d097024ce1dc16041f0bd67419693855eb44034f8f41",
+    "disparity_legend.png": "1a0eff447c58e529d274bd1b97f3465a7af6a1cb9c035b5b41b0857c1334592d"
+  }
+}

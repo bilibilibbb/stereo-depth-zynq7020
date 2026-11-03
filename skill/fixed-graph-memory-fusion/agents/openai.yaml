@@ -1,0 +1,4 @@
+interface:
+  display_name: "固定计算图的存储压缩与融合"
+  short_description: "针对形状固定的神经网络和图像处理链，通过位宽、生命周期、生产消费融合与有限行块缓存减少张量空间及实际搬运，并核"
+  default_prompt: "使用 $fixed-graph-memory-fusion 分析当前工程，给出可执行改动、依据与验证范围。"

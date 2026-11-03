@@ -1,0 +1,4 @@
+interface:
+  display_name: "PYNQ 自定义 IP 驱动与寄存器契约"
+  short_description: "为 PYNQ 自定义 RTL/HLS IP 建立可复用的寄存器访问、驱动绑定与完成协议，处理版本、位掩码、读清"
+  default_prompt: "使用 $pynq-register-driver 整理当前 PYNQ 工程，给出可运行方法和验证依据。"

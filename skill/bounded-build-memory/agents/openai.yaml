@@ -1,0 +1,4 @@
+interface:
+  display_name: "受限内存下的构建与恢复"
+  short_description: "在 FPGA 综合、仿真或大型数据处理因内存受限而反复失败时，分析整个自有任务树，降低驻留并按可恢复阶段继续；"
+  default_prompt: "使用 $bounded-build-memory 分析当前工程，给出可执行改动、依据与验证范围。"
