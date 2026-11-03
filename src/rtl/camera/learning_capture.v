@@ -1,0 +1,47 @@
+`timescale 1ns/1ps
+`default_nettype none
+module learning_capture #(parameter BUILD_ID=0,parameter PROFILE_SGM=0,parameter CAPTURE_ENABLED=1)(
+(* X_INTERFACE_INFO="xilinx.com:signal:clock:1.0 CLK CLK", X_INTERFACE_PARAMETER="ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET resetn, FREQ_HZ 50000000" *) input wire clk,
+(* X_INTERFACE_INFO="xilinx.com:signal:reset:1.0 RST RST", X_INTERFACE_PARAMETER="POLARITY ACTIVE_LOW" *) input wire resetn,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI AWADDR", X_INTERFACE_PARAMETER="XIL_INTERFACENAME S_AXI, PROTOCOL AXI4LITE, DATA_WIDTH 32, ADDR_WIDTH 32, READ_WRITE_MODE READ_WRITE" *) input wire [31:0] s_axi_awaddr,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input wire s_axi_awvalid,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output wire s_axi_awready,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input wire [31:0] s_axi_wdata,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input wire [3:0] s_axi_wstrb,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI WVALID" *) input wire s_axi_wvalid,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI WREADY" *) output wire s_axi_wready,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output wire [1:0] s_axi_bresp,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output wire s_axi_bvalid,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input wire s_axi_bready,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input wire [31:0] s_axi_araddr,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input wire s_axi_arvalid,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output wire s_axi_arready,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output wire [31:0] s_axi_rdata,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output wire [1:0] s_axi_rresp,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output wire s_axi_rvalid,
+(* X_INTERFACE_INFO="xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input wire s_axi_rready,
+input wire pclk0,
+input wire pclk1,
+input wire vs0,
+input wire vs1,
+input wire href0,
+input wire href1,
+input wire [7:0] data0,
+input wire [7:0] data1,
+input wire scl0,
+input wire sda0,
+input wire scl1,
+input wire sda1,
+input wire camera_reset_level,
+input wire camera_pwdn_level,
+input wire camera_xclk_level,
+output wire scl0_low,
+output wire sda0_low,
+output wire scl1_low,
+output wire sda1_low,
+output wire camera_reset_low,
+output wire camera_pwdn_low
+);
+capture_core #(.BUILD_ID(BUILD_ID),.CAP_WIDTH((PROFILE_SGM||!CAPTURE_ENABLED)?2:320),.CAP_HEIGHT((PROFILE_SGM||!CAPTURE_ENABLED)?1:240)) core(.s_awaddr(s_axi_awaddr-32'h43c10000),.s_awvalid(s_axi_awvalid),.s_awready(s_axi_awready),.s_wdata(s_axi_wdata),.s_wstrb(s_axi_wstrb),.s_wvalid(s_axi_wvalid),.s_wready(s_axi_wready),.s_bresp(s_axi_bresp),.s_bvalid(s_axi_bvalid),.s_bready(s_axi_bready),.s_araddr(s_axi_araddr-32'h43c10000),.s_arvalid(s_axi_arvalid),.s_arready(s_axi_arready),.s_rdata(s_axi_rdata),.s_rresp(s_axi_rresp),.s_rvalid(s_axi_rvalid),.s_rready(s_axi_rready),.pclk0(CAPTURE_ENABLED?pclk0:clk),.pclk1(CAPTURE_ENABLED?pclk1:clk),.vs0(CAPTURE_ENABLED?vs0:1'b0),.href0(CAPTURE_ENABLED?href0:1'b0),.data0(CAPTURE_ENABLED?data0:8'b0),.vs1(CAPTURE_ENABLED?vs1:1'b0),.href1(CAPTURE_ENABLED?href1:1'b0),.data1(CAPTURE_ENABLED?data1:8'b0),.clk(clk),.resetn(resetn),.scl0(scl0),.sda0(sda0),.scl1(scl1),.sda1(sda1),.camera_reset_level(camera_reset_level),.camera_pwdn_level(camera_pwdn_level),.camera_xclk_level(camera_xclk_level),.scl0_low(scl0_low),.sda0_low(sda0_low),.scl1_low(scl1_low),.sda1_low(sda1_low),.camera_reset_low(camera_reset_low),.camera_pwdn_low(camera_pwdn_low));
+endmodule
+`default_nettype wire
