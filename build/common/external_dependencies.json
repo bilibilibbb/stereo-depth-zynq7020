@@ -1,0 +1,30 @@
+{
+  "not_redistributed": [
+    {
+      "path": "reference/compute/reference/pointwise_rtl/DSP48E1.v",
+      "sha256": "58fd6ee8cb59f7e6fa3e8bd39c45c919cab69957ca91a1ad31297ebaa09efa99",
+      "bytes": 96948,
+      "reason": "External vendor simulation/generated header; not required by run.py firmware, bsp, short-burst, desktop-build or platform."
+    },
+    {
+      "path": "reference/compute/reference/pointwise_rtl/glbl.v",
+      "sha256": "c48753ff3481f46872a09160eee14b5596b37444c1bf2b84bf2acd922e7c982d",
+      "bytes": 1474,
+      "reason": "External vendor simulation/generated header; not required by run.py firmware, bsp, short-burst, desktop-build or platform."
+    },
+    {
+      "path": "reference/compute/reference/v351a/driver_dpi.h",
+      "sha256": "8da41a996676fc3f5172cce7c73cc5a266b904cbe45f37271e4a73115bf10423",
+      "bytes": 1617,
+      "reason": "External vendor simulation/generated header; not required by run.py firmware, bsp, short-burst, desktop-build or platform."
+    }
+  ],
+  "instructions": "For optional historical full ModelSim simulations use a separately licensed Vivado/ModelSim installation and verify the recorded model identities. Do not substitute a newer model while claiming the old numerical result.",
+  "tools": [
+    "Vivado 2018.3",
+    "SDK 2018.3",
+    "Icarus Verilog 11.0 devel s20150603-642-g3bdb50da",
+    "Windows .NET Framework C# compiler"
+  ],
+  "tool_binaries_included": false
+}

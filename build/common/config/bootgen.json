@@ -1,0 +1,7 @@
+{
+  "environment": "BOOTGEN_PATH",
+  "launcher_sha256": "2b9489edf19117384acf118c9d1df59b682434f5fdcf84bec1aea3e9df9bdb97",
+  "engine_relative": "unwrapped/win64.o/bootgen.exe",
+  "engine_sha256": "217c54ee946c2e4e8f304b787751456b44f62c3a40ef73f90341b01d7f58d5f8",
+  "version": "SDK 2018.3 bootgen"
+}

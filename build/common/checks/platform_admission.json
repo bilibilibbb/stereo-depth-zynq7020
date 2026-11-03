@@ -1,0 +1,75 @@
+{
+  "schema": "release_generation_admission_v1",
+  "checked_utc": "2026-10-27T21:24:58.486541+00:00",
+  "allowed_action": "platform_generation_only",
+  "parent_candidate": "snapshot11459_lifecycle_20261027T175230_093976Z",
+  "parent_sources_checked": 1614,
+  "changed_files": [
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "e54d64387ceb161e69911216485bcf76a74b4e61bc0e9647fb2d2aaa2992c54c",
+      "after_sha256": "1ec7a0362c0c7085e476061447983c9dc47f844db561b0f667dc72252006f635"
+    },
+    {
+      "path": "GOAL.md",
+      "before_sha256": "a3f68cc1634f1c9e3b8f13efda9588a2e76204e6f769e2fd11fb10b600cd587b",
+      "after_sha256": "cd04ba4dfb77b903201f6583b79ead0386bcfab611e5791c816e60c954ab39b6"
+    }
+  ],
+  "change_scope": "Only active submission contract and process preferences changed; all computational, interface, weight and build sources in the accepted candidate remain byte-identical.",
+  "historical_gates": [
+    {
+      "gate": "charter",
+      "original_report": {
+        "path": "evidence/snapshot11459_lifecycle_20261027T175230_093976Z/charter.json",
+        "sha256": "213e5e124e46664c49d4f24344f5a72d7fe7040e7fdfbc43703bd49b5230d41f"
+      },
+      "evidence_kind": "agreed_requirements",
+      "historical_pass": true
+    },
+    {
+      "gate": "demo_accuracy_acceptance",
+      "original_report": {
+        "path": "evidence/snapshot11459_lifecycle_20261027T175230_093976Z/demo_accuracy_acceptance.json",
+        "sha256": "2da9df32c7b690d6e9deba9f909a380286d7632b93b67a4afc50a4ea0959a437"
+      },
+      "evidence_kind": "human_accepted_demo_accuracy",
+      "historical_pass": true
+    },
+    {
+      "gate": "demo_quantized_acceptance",
+      "original_report": {
+        "path": "evidence/snapshot11459_lifecycle_20261027T175230_093976Z/demo_quantized_acceptance.json",
+        "sha256": "d070b11c4ba5bbfec9e1ff39ba9ce6bbf450fcb142604f6ee898357a94eb6b91"
+      },
+      "evidence_kind": "human_accepted_quantized_demo",
+      "historical_pass": true
+    },
+    {
+      "gate": "deployment_plan",
+      "original_report": {
+        "path": "build/20261027T175548_688919Z/video_sd_upgrade/deployment_plan.json",
+        "sha256": "145aa146315fe7be75155e042b27fd9c1de237cd94c0529d16f77acf7029b2d2"
+      },
+      "evidence_kind": "authorized_deployment_component_plan",
+      "historical_pass": true
+    },
+    {
+      "gate": "component_simulation",
+      "original_report": {
+        "path": "evidence/snapshot11459_lifecycle_20261027T175230_093976Z/component_simulation.json",
+        "sha256": "b993b6ce3ff56bc964947bc395b3628d85c7ea6d734a8e6395eb7f37a21c6145"
+      },
+      "evidence_kind": "component_rtl_simulation",
+      "historical_pass": true
+    }
+  ],
+  "hardware_contract_sha256": "a32f1a600ee2c3beadaf1af3f3818f9dd807a3c1112af3c5bde31e80d1054918",
+  "weights": {
+    "path": "reference/compute/weights/weights_256_ema.pt",
+    "sha256": "ed2076d18ce6c6f0bb688773eea08113d922801ce156b8c7f6624bdfffc602fe"
+  },
+  "new_functional_pass": false,
+  "physical_pass": false,
+  "scope": "Reuses unchanged-candidate functional evidence for BD/IP generation, then requires fresh DMA checks. This is not permission for synthesis, implementation, download or board changes."
+}

@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "source": "project\\stereo_depth\\optimizations\\camera_href_frame_20260925\\physical_pins_v1.tcl",
+      "source_sha256": "15ba124d3eaebcbc10c2e8ba0d418d3aa913315190c6ade288b81a128c0077f0",
+      "original": "reference/camera_constraints/pins.tcl",
+      "derived": "hardware/constraints/pins.tcl",
+      "derived_sha256": "15ba124d3eaebcbc10c2e8ba0d418d3aa913315190c6ade288b81a128c0077f0"
+    },
+    {
+      "source": "project\\stereo_depth\\optimizations\\retained11459_deploy_20261002\\physical_control_path_sources_v115b\\camera_cdc.tcl",
+      "source_sha256": "f0efc0f3415b9a7a3a5585ec7eeb6f2a34208567f856d17afce92f1c49264057",
+      "original": "reference/camera_constraints/camera_cdc.tcl",
+      "derived": "hardware/constraints/camera_cdc.tcl",
+      "derived_sha256": "71e8473e83231c0152f865a1282809328241254217080d837e3e12178070692f"
+    }
+  ],
+  "historical_capture": {
+    "source": "project\\stereo_depth\\measurements\\camera_physical_20260924T183545_051137Z\\result.json",
+    "sha256": "6bfc22277b3a3eac2c1cbf44cdb5c8b85a2290b92d3eeef911d4e15f3a65bd95"
+  },
+  "scope": "Preserve the previously exercised camera pinout and scoped CDC template.\n\nThis does not supply missing sensor timing, calibration or physical acceptance.\n",
+  "CDC_change": "Only expected BD instance name; every synchronizer endpoint/count assertion retained.",
+  "pending": [
+    "Actual current netlist endpoint/CDC checks",
+    "Valid sensor source-synchronous clock and min/max input timing",
+    "Real calibration and current camera-mode identity",
+    "Complete physical resources/timing"
+  ],
+  "constraints_applied": false,
+  "physical_pass": false,
+  "board_operations": 0
+}
