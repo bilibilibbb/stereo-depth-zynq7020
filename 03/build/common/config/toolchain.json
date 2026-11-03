@@ -1,0 +1,27 @@
+{
+  "host": {
+    "executable": "gcc.exe",
+    "sha256": "ee248b53ebf528399315d7a1608ff38679da732d1ab5daf766ea9f8bccbdb66e",
+    "environment": "HOST_PATH"
+  },
+  "arm": {
+    "executable": "arm-none-eabi-gcc.exe",
+    "sha256": "8e8a6cb327eaa847ba6b8a197d989a26321c1f0ff6261ecf057ec28eee7ce4e2",
+    "environment": "ARM_PATH"
+  },
+  "iverilog": {
+    "executable": "iverilog.exe",
+    "sha256": "f32b6bce7268abaec444cd8d01f0e5c5d20d786ad976864a026fbf785227346e",
+    "environment": "IVERILOG_PATH"
+  },
+  "vvp": {
+    "executable": "vvp.exe",
+    "sha256": "a1816bc4ed5d1deae6dc199d9693e095b573e08bf213741c857419a0063dc13c",
+    "environment": "VVP_PATH"
+  },
+  "make": {
+    "executable": "make.exe",
+    "environment": "MAKE_PATH",
+    "sha256": "c33351203f59b5f67bbb3a8106a7e2068f327ab7ef81ea7b44595df3d2a582c7"
+  }
+}

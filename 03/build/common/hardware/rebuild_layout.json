@@ -1,0 +1,21 @@
+{
+  "ip_leafs": [
+    "snapshot_bd_auto_cc_0",
+    "snapshot_bd_auto_cc_1",
+    "snapshot_bd_auto_pc_0",
+    "snapshot_bd_camera_protocol_0",
+    "snapshot_bd_compute_protocol_0",
+    "snapshot_bd_fp_protocol_0",
+    "snapshot_bd_ps_0",
+    "snapshot_bd_sgm_protocol_0",
+    "snapshot_bd_xbar_0",
+    "snapshot_bd_xbar_1"
+  ],
+  "module_ref_wrappers": [
+    "snapshot_bd_capture_ddr_0",
+    "snapshot_bd_compute_0",
+    "snapshot_bd_sensor_0"
+  ],
+  "provenance_sha256": "49d3252054bc51314120114e7459df47a4aa7b9ff08641f105242034b6a3f872",
+  "scope": "Names of actual generated synthesis leaf IPs and module-reference wrappers; no old build path or PASS is used."
+}

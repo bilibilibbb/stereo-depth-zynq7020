@@ -1,0 +1,7 @@
+{
+  "environment": "VIVADO_PATH",
+  "launcher_sha256": "ee806dfd48801247b5344ba5c45b1c0d42a0efa46b5151f569973e9e2e40d41f",
+  "engine_relative": "unwrapped/win64.o/vivado.exe",
+  "engine_sha256": "88cedc108e60b8132d69c2d6b801e05c6d518c932e074238498983ad0d064d34",
+  "version": "Vivado 2018.3"
+}
