@@ -1,0 +1,18 @@
+{
+  "environment": "VIVADO_2026_PATH",
+  "launcher_sha256": "a5f91ee867cea61be4355caf9f7a784c6c34351c5c1d1618562ddda299e38a8b",
+  "engine_relative": "unwrapped/win64.o/vivado.exe",
+  "engine_sha256": "3a4e9e3f03d20cd1994dc2eff44566af7a10eaaae04429e9d460bffe3b0e86e4",
+  "version": "2026.1",
+  "doctor_receipt": "build2026/20261101T171137_978751Z/environment_result.json",
+  "doctor_receipt_sha256": "7eb85102307bf0c8017a90572eab9a17b97dc09618a972475b09360d6c83d89d",
+  "xpm_constraint_hashes": {
+    "xpm_cdc_array_single": "c99809b89dda14094864e4998659957c318fd22f870172ad4e75862162421494",
+    "xpm_cdc_async_rst": "13704f73f9287c3683ae0154dbb397cc50bf4a82cbcdfdc0fbdd8609ef458db7",
+    "xpm_cdc_gray": "5b15cbd342000de8a719ff79e6e9532d5123b59d2912cfa48453d6662e29cea6",
+    "xpm_cdc_handshake": "c524b464dff2e91e30389fa624522c37bd1585068041e303918218ac66625c1c",
+    "xpm_cdc_low_latency_handshake": "a1a7dec5b8c954bc102d9418c333ebb564b6d2af8b811427c25524fb58d00d95",
+    "xpm_cdc_single": "9951ac5bfe980decbc042eb15f031cac402418f2f221e5b2652146270cea8c32",
+    "xpm_cdc_sync_rst": "495bcdd7439775b65bac00999bb2177afd83278d63ce32201557e441c9214761"
+  }
+}

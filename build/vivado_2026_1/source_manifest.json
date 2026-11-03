@@ -1,0 +1,168 @@
+{
+  "target_tool_version": "2026.1",
+  "baseline_manifest_sha256": "f76e8f4f606e5175bde91874802c6992ce65cb464a47228501e8d5b5b0a6c7cf",
+  "migration_files": [
+    {
+      "path": "build_hardware_2026.py",
+      "bytes": 2439,
+      "sha256": "b29aa021b409d1ef10b4ea67f028af36c5622e9c2d91e16afdb2d8d21c0ab9d3"
+    },
+    {
+      "path": "modern/assemble_nn.tcl",
+      "bytes": 1987,
+      "sha256": "cee3cc4f060e9d34d8419c57d71e677e189f5aa8df29901676620a888873be9b"
+    },
+    {
+      "path": "modern/boot_worker.py",
+      "bytes": 4649,
+      "sha256": "e62d1e817ef7847d237cd7a9af50dcf228c6b89f214bcff73b54fbb517c0ec07"
+    },
+    {
+      "path": "modern/component_area.tcl",
+      "bytes": 8107,
+      "sha256": "43c2215558bf640668ff4ce4ca89c0947137c08d36882f0bd6d5ce0642eff5b6"
+    },
+    {
+      "path": "modern/doctor_2026.tcl",
+      "bytes": 858,
+      "sha256": "3fd62d87f04a9ac72f15eeb3255ffbe4f74f0bb97d05a83a797145a549dbcefa"
+    },
+    {
+      "path": "modern/executors/99a497a2ca91aa8ecfda7b7611fbafa94cae783b81630f26c5b40747d4fcfd15.py",
+      "bytes": 17948,
+      "sha256": "99a497a2ca91aa8ecfda7b7611fbafa94cae783b81630f26c5b40747d4fcfd15"
+    },
+    {
+      "path": "modern/executors/b283c9ba5aa4515c29ffbe952bf40a2fd39ef655527904503a21b4d7ff820738.py",
+      "bytes": 17335,
+      "sha256": "b283c9ba5aa4515c29ffbe952bf40a2fd39ef655527904503a21b4d7ff820738"
+    },
+    {
+      "path": "modern/executors/c861d668aa59c43d0689a6be67eb050ecaad87c550610a999c348b7049ca731c.py",
+      "bytes": 16208,
+      "sha256": "c861d668aa59c43d0689a6be67eb050ecaad87c550610a999c348b7049ca731c"
+    },
+    {
+      "path": "modern/executors/f7182f98279df356a6ec97b55de1534a5de898f94439f5eea13e8fb8f8c98fac.py",
+      "bytes": 14732,
+      "sha256": "f7182f98279df356a6ec97b55de1534a5de898f94439f5eea13e8fb8f8c98fac"
+    },
+    {
+      "path": "modern/hardware_plan.py",
+      "bytes": 16887,
+      "sha256": "5f265f4f3f04ad9b86621396bbf2385300f831af682b5d60d8e467341ee1d430"
+    },
+    {
+      "path": "modern/ip_catalog.tcl",
+      "bytes": 602,
+      "sha256": "979d22d14d98898beaaa1c2a699cdbd8c921910f21c9a13909511722f85f7fa3"
+    },
+    {
+      "path": "modern/legacy_component_area.tcl",
+      "bytes": 2863,
+      "sha256": "72950dccda423c4d354cedf55e2f083a457a789a0264f8862d9328db7c1afd1a"
+    },
+    {
+      "path": "modern/legacy_nn_area.tcl",
+      "bytes": 2199,
+      "sha256": "c15728f83ad5b54aa5ac6b6294ca4cf02704a5e7d194d724ba76d0d8c1c4657f"
+    },
+    {
+      "path": "modern/nn_leaf_area.tcl",
+      "bytes": 2216,
+      "sha256": "87893b67e06ee45e9312e6f47dcd2aac3e6e669ce3e11f1b9e6e7666ef44082b"
+    },
+    {
+      "path": "modern/owned_residency.py",
+      "bytes": 9312,
+      "sha256": "15c15a6331c2f154c45ec7e068c1a4116ee6cf4a9e94033789e483ae60178e1b"
+    },
+    {
+      "path": "modern/physical_placement.tcl",
+      "bytes": 4700,
+      "sha256": "13218295ca19f5cb917d18e5dad53778b4a1e0a7acbfb5a71c2711d1700b4876"
+    },
+    {
+      "path": "modern/physical_preflight.tcl",
+      "bytes": 3455,
+      "sha256": "ff3e2e4c0ddc77adb6bb8e58eb17a80d442d26d870a757c60a4952da62e9e940"
+    },
+    {
+      "path": "modern/physical_route.tcl",
+      "bytes": 2897,
+      "sha256": "6721dc489268ac728d7982b1357bc92f549e85ac3ccd36967049c36e48c84a9a"
+    },
+    {
+      "path": "modern/platform_2026.tcl",
+      "bytes": 8972,
+      "sha256": "d7ff8c84246de482d4833fbfcec3b302545c17d8d685888676dc35c26ace6e3f"
+    },
+    {
+      "path": "modern/platform_area.tcl",
+      "bytes": 6623,
+      "sha256": "664656b5982beea783aede81ee9ef2aceeabb69f62eed0a903023e0477a4f1ed"
+    },
+    {
+      "path": "modern/platform_worker.py",
+      "bytes": 5763,
+      "sha256": "6c9787f1bcec07f26ec09ea99967c645747749748084c5550ace9270e62e24f8"
+    },
+    {
+      "path": "modern/port_support.py",
+      "bytes": 3757,
+      "sha256": "5c91a13c58e3cebcab19ecb29020d2c4832f7a84866a1dbbccc8d9885a0d04f0"
+    },
+    {
+      "path": "modern/rebuild_hardware.py",
+      "bytes": 20540,
+      "sha256": "b12b861590daa491440108245c0da26ba20dbc946d1b671119c2dcf4f0c3ede1"
+    },
+    {
+      "path": "modern/software_baseline/application.elf",
+      "bytes": 611732,
+      "sha256": "40ba836539ff0cc805ac098868b52c67a078dde2bbc93381932340ccad364356"
+    },
+    {
+      "path": "modern/software_baseline/fsbl.elf",
+      "bytes": 387620,
+      "sha256": "903db5cc7c5a3545c86bd707fa7cdb5f876f05bf7de979a3cee0cd6dda0753be"
+    },
+    {
+      "path": "modern/software_baseline/ps7_init.c",
+      "bytes": 418070,
+      "sha256": "30c4da0062372297c4a61bba447c3925aaa060d84f89b2a3cf478b3944086635"
+    },
+    {
+      "path": "modern/software_baseline/R14CAL.BIN",
+      "bytes": 1228992,
+      "sha256": "27411b299797bd5f667a742d368b8a17126ce724091434931d39051137ecf401"
+    },
+    {
+      "path": "modern/software_baseline/SNAPCFG.BIN",
+      "bytes": 160,
+      "sha256": "31ada277a9782e92eecd1e53510ccf18c2afcbf4b38388b05106bf074d89b01d"
+    },
+    {
+      "path": "modern/software_baseline/software_identity.json",
+      "bytes": 2062,
+      "sha256": "c9309296e0ebd7a1b9fba0c06c7b349cce93715d903cbc35ffede5d662c55c68"
+    },
+    {
+      "path": "modern/tool_profile.json",
+      "bytes": 1176,
+      "sha256": "ff818246225730fe4dc68089cd2b6955070b4d5b0cfe0721b7f93e36dd88fa2e"
+    },
+    {
+      "path": "reproduce_2026.py",
+      "bytes": 3730,
+      "sha256": "34c1b28286a225a9ee08487337db1fd72166948ae46cece2ff620ee4d49797b5"
+    },
+    {
+      "path": "run_2026.py",
+      "bytes": 4881,
+      "sha256": "7680d683228f37d80eede9961d31dab19556642c72bcb74fd89fb262094d94cd"
+    }
+  ],
+  "scope": "Source binding only. No Vivado 2026.1 execution or compatibility PASS is asserted.",
+  "previous_baseline_manifest_sha256": "ff3955c8ea1e1b646050b7b2dca9e195d32c9ef09185f960fc8cdb844159d69f"
+}

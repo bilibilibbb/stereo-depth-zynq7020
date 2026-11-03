@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双目拍照 · 深度对比</title>
+<style>
+:root{color-scheme:light;font-family:"Microsoft YaHei",system-ui,sans-serif;color:#183044;background:#edf2f5}*{box-sizing:border-box}body{margin:0;padding:28px}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}h1{font-size:25px;margin:0 0 7px}p{margin:0;color:#61788a;font-size:14px}.badge{border-radius:20px;padding:8px 15px;background:#dce8ed;font-size:13px}main{display:grid;grid-template-columns:minmax(340px,1fr) minmax(550px,1.45fr);gap:20px}.card{background:white;border-radius:16px;padding:21px;box-shadow:0 3px 20px #24415a08}.card h2{font-size:17px;margin:0 0 16px}.images{display:grid;grid-template-columns:1fr 1fr;gap:14px}figure{margin:0}figcaption{font-size:14px;margin:0 0 9px;color:#506675}.screen{background:#10202d;aspect-ratio:4/3;display:grid;place-items:center;border-radius:9px;overflow:hidden;position:relative}.screen span{position:absolute;color:#99adbb;font-size:14px}.screen canvas{width:100%;height:100%;object-fit:contain;image-rendering:auto;visibility:hidden}.screen.ready span{display:none}.screen.ready canvas{visibility:visible}#synthetic{display:none;background:#fff0ce;color:#8b5614;padding:12px 18px;border-radius:10px;margin-bottom:20px}.legend{height:9px;border-radius:6px;background:linear-gradient(90deg,#142d8c,#00b8e1,#a7e044,#fff086,#d63636);margin-top:19px}.scale{display:flex;justify-content:space-between;font-size:12px;color:#6c8291;margin-top:6px}.note{font-size:12px;line-height:1.8;margin-top:15px}.metrics{display:flex;gap:25px;border-top:1px solid #edf1f4;padding-top:16px;margin-top:17px}.metrics small{display:block;color:#768c9a;margin-bottom:5px}.metrics b{font-size:18px;font-weight:500}details{margin-top:17px;font-size:13px;color:#506675}details canvas{width:240px;max-width:100%;margin-top:10px;border-radius:7px}footer{font-size:12px;color:#738794;margin-top:20px}@media(max-width:1000px){main{grid-template-columns:1fr}body{padding:16px}}
+</style></head><body>
+<header><div><h1>双目深度对比</h1><p>后台持续计算；按 PS_KEY1 冻结最新完整结果</p></div><div class="badge" id="connection">等待设备连接</div></header>
+<div id="synthetic">当前为合成数据协议测试，未运行板端推理。</div>
+<main><section class="card"><h2>实时取景</h2><div class="screen" id="previewBox"><span>等待普通视频</span><canvas id="preview"></canvas></div><p class="note" id="previewState">尚未收到视频帧</p></section>
+<section class="card"><h2 id="resultTitle">最近一次拍照</h2><div class="images">
+<figure><figcaption>纯 SGM</figcaption><div class="screen" id="sgmBox"><span>等待拍照</span><canvas id="sgm"></canvas></div></figure>
+<figure><figcaption id="modelLabel">小模型处理后</figcaption><div class="screen" id="modelBox"><span>等待拍照</span><canvas id="model"></canvas></div></figure>
+</div><div class="legend"></div><div class="scale"><span>0 像素</span><span>统一视差色标</span><span>64 像素</span></div>
+<p class="note"><label><input id="sharedMask" type="checkbox" checked> 仅比较共同有效区域</label><br><span id="maskNote">灰色方格表示无效区域；相同颜色对应相同视差。未勾选时可查看模型填补区域。</span> 未换算实际距离。</p>
+<div class="metrics"><div><small>SGM 就绪 / 板端</small><b id="sgmTime">—</b></div><div><small>模型完成 / 板端</small><b id="modelTime">—</b></div></div>
+<p class="note" id="sourceAge">源帧年龄将在完整结果到达后显示。</p>
+<p class="note" id="resultState">完成两张图后一起更新，处理中保留上一组结果。</p>
+<details><summary>查看对应原图</summary><canvas id="photo"></canvas></details>
+</section></main><footer>板端负责计算，电脑负责接收与显示。连续模式的处理时间从源帧采集启动计算；按键可选择较早的完整结果，网络与显示耗时另计。</footer>
+<script src="/viewer.js"></script></body></html>
